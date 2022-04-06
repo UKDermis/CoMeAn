@@ -15,17 +15,17 @@
 #' @examples
 #' annmods()
 
-#' TODO: add use for mode/add different modes
-#' TODO: Complete Annotations (add return params)
-#' TODO: Add method to analyze single gene
-#' TODO: Way to combine V. count and node degree
-#' TODO: More than two graphs
-#' TODO: Extract methods
-#' TODO: Change directory to where files get saved
+# TODO: add use for mode/add different modes
+# TODO: Complete Annotations (add return params)
+# TODO: Add method to analyze single gene
+# TODO: Way to combine V. count and node degree
+# TODO: More than two graphs
+# TODO: Extract methods
+# TODO: Change directory to where files get saved
 
-#' Title     : net_comparison
-#' Objective : Provide a number of functions to compare two (or more) networks
-#' Created by: Nicholas Schmitt
+# Title     : net_comparison
+# Objective : Provide a number of functions to compare two (or more) networks
+# Created by: Nicholas Schmitt
 
 net_comparison <- function(file1="AdL",
                            file2="PsoL",
