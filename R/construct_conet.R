@@ -21,6 +21,8 @@
 #' @examples
 #' construct_conet()
 
+# TODO optional community plot
+
 construct_conet <- function(exmat, outnam,
                      cutcor=0.8,
                      ndeg=1,
@@ -181,11 +183,11 @@ construct_conet <- function(exmat, outnam,
   # Output
 
   write_graph(sset,
-              file = paste0(outnam, ".gml"),
+              file = paste0(outnam, "_network.gml"),
               format = "gml")
 
   utils::write.table(clvtab,
-              file = paste0(outnam, ".csv"),
+              file = paste0(outnam, "_nodestats.csv"),
               sep = "\t",
               row.names = F,
               dec=",",

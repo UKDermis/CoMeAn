@@ -4,8 +4,7 @@
 \alias{net_comparison}
 \title{net_comparison}
 \usage{
-net_comparison(file1 = "AdL", file2 = "PsoL", min_dist = 0.75,
-  cwd = "./PAP/data/", format1 = "gml", format2 = "gml")
+net_comparison(file1, file2, min_dist = 0.75)
 }
 \arguments{
 \item{file1}{(Required) String, name of the file to be loaded. Default is "AdL"}
@@ -24,6 +23,6 @@ net_comparison(file1 = "AdL", file2 = "PsoL", min_dist = 0.75,
 Compares two graphs based off datastructures found via unsupervised learning
 }
 \examples{
-annmods()
+net_comparison()
 }
 \keyword{produces_plot}

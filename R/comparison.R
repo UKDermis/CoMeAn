@@ -13,7 +13,7 @@
 #' @keywords produces_plot
 #' @export
 #' @examples
-#' annmods()
+#' net_comparison()
 
 # TODO: add use for mode/add different modes
 # TODO: Complete Annotations (add return params)
@@ -27,22 +27,17 @@
 # Objective : Provide a number of functions to compare two (or more) networks
 # Created by: Nicholas Schmitt
 
-net_comparison <- function(file1="AdL",
-                           file2="PsoL",
-                           min_dist=0.75,
-                           cwd="./PAP/data/",
-                           format1="gml",
-                           format2="gml"){
-  graph1 <- read_in(file1, cwd=cwd, format=format1)
-  graph2 <- read_in(file2, cwd=cwd, format=format2)
+net_comparison <- function(graph1=AD_graph,
+                           graph2=PSO_graph,
+                           min_dist=0.75){
 
-  # Clean graphs
-  graph1 <- clean(graph1)
-  graph2 <- clean(graph2)
-
-  # Perform clustering /extract method from above
-  graph1 <- module_assignment(graph1)
-  graph2 <- module_assignment(graph2)
+  # # Clean graphs
+  # graph1 <- clean(graph1)
+  # graph2 <- clean(graph2)
+  #
+  # # Perform clustering /extract method from above
+  # graph1 <- module_assignment(graph1)
+  # graph2 <- module_assignment(graph2)
 
   # Exchange graph1, graph2 to grapX_modules
   graph1 <- information_table(graph1, file1)
