@@ -1,6 +1,8 @@
 #' Pearson co-expression network from gene expression matrix
 #'
-#' Pearson correlation network based on.Writes to disk: A, gml network file B, gene cluster memberships and scores csv table 3, network communities plot (png) 4, network plot SkinSig database overlay (png)
+#' Pearson correlation network based on: 1, gml network file. 2, gene cluster memberships and scores csv
+#' table. 3, network communities plot (png). 4, network plot SkinSig database overlay (png). Writes to disk.
+#'
 #' @import igraph
 #' @importFrom matrixStats rowMaxs
 #' @importFrom grDevices dev.off png

@@ -10,11 +10,6 @@
 #' @examples
 #' annmods()
 
-# Title     : TODO
-# Objective : TODO
-# Created by: nic
-# Created on: 29.11.21
-
 single_gene_analysis <- function(graph, gene_name) {
 
   selected_node <- V(graph)[name %in% c(gene_name)]

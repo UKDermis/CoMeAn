@@ -5,10 +5,10 @@ output: html_document
 
 # CoMeAn package tutorial
 
-In the present tutorial, we will generate a gene co-expression network with detailed annotations.
-The demo input files are gene expression matrices of two common skin diseases, and recently published gene-to-cell type marker mappings.
-Demo files can be downloaded from .....
-Since most functions produce multiple large output files of various formats, outputs are usually written to disc instead of exceedingly complex S4 objects.
+# In the present tutorial, we will generate a gene co-expression network with detailed annotations.
+# The demo input files are gene expression matrices of two common skin diseases, and recently published gene-to-cell type marker mappings.
+# Demo files can be downloaded from .....
+# Since most functions produce multiple large output files of various formats, outputs are usually written to disc instead of exceedingly complex S4 objects.
 
 # (Extend explanation)
 
@@ -141,13 +141,5 @@ PSO_graph <- read_graph("./PSO_network.gml", format = "gml")
 net_comparison(file1 = "AD_graph.gml",
                file2 = "PSO_graph.gml",
                cwd = "./")
-
-
-
-
-
-
-
-
 
 print("Step 5 complete")

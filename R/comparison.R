@@ -29,6 +29,8 @@
 
 net_comparison <- function(graph1=AD_graph,
                            graph2=PSO_graph,
+                           file1="AD",
+                           file2="PSO",
                            min_dist=0.75){
 
   # # Clean graphs
@@ -40,8 +42,8 @@ net_comparison <- function(graph1=AD_graph,
   # graph2 <- module_assignment(graph2)
 
   # Exchange graph1, graph2 to grapX_modules
-  graph1 <- information_table(graph1, file1)
-  graph2 <- information_table(graph2, file2)
+  info_table1 <- information_table(graph1, file1)
+  info_table2 <- information_table(graph2, file2)
 
   # do module-wise comparision if dist between modules above min_dist
   g1_modules <- unique(V(graph1)$module)

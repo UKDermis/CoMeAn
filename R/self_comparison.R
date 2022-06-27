@@ -11,11 +11,6 @@
 #' self_comparison()
 #' TODO: Add variable to control used distance algorithm, add further analysis
 
-# Title     : TODO
-# Objective : TODO
-# Created by: nic
-# Created on: 29.11.21
-
 
 self_comparison <- function(file, min_dist=0.75, cwd="./", format="gml"){
   x <- c(cwd, file, "_new.", format)

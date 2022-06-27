@@ -9,15 +9,6 @@
 #' @examples
 #' annmods()
 
-# Title     : TODO
-# Objective : TODO
-# Created by: nic
-# Created on: 29.11.21
-# min_dist: Float, the minimal distance found in the heatmap
-# min_dist_modules: String, contains the two modules with minimal distance
-# max_dist: Float, the maximal distance found in the heatmap
-# max_dist_modules: String, contains the two modules with maximal distance
-
 closest_and_farthest_modules <- function(heatmap, g1_modules, g2_modules){
   min_dist <- max(heatmap)
   max_dist <- min(heatmap)

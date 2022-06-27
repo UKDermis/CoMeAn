@@ -9,11 +9,6 @@
 #' @examples
 #' annmods()
 
-# Title     : TODO
-# Objective : TODO
-# Created by: nic
-# Created on: 29.11.21
-
 information_table <- function(graph, filename) {
   degrees <- degree(graph, mode = "all", loops = F)
 

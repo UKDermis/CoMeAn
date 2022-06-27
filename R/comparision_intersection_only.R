@@ -12,13 +12,6 @@
 #' @examples
 #' annmods()
 
-# TODO: add use for mode/add different modes
-# Title     : TODO
-# Objective : TODO
-# Created by: nic
-# Created on: 29.11.21
-
-
 comparison_intersection_only <- function(file1="AdL", file2="PsoL", min_dist=0.75, cwd="./PAP/data/", format1="gml", format2="gml"){
   graph1 <- read_in(file1, cwd=cwd, format=format1)
   graph2 <- read_in(file2, cwd=cwd, format=format2)

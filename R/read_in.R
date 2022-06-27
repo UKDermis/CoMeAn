@@ -9,11 +9,6 @@
 #' @examples
 #' read_in()
 
-# Title     : TODO
-# Objective : TODO
-# Created by: nic
-# Created on: 29.11.21
-
 read_in <- function(name, cwd="./", format="gml", plot=FALSE){
   x <- c(cwd, name, ".", format)
   x <- paste(x, collapse="")

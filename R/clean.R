@@ -7,11 +7,6 @@
 #' @examples
 #' annmods()
 
-# Title     : TODO
-# Objective : TODO
-# Created by: nic
-# Created on: 29.11.21
-
 clean <- function(net, keep=c("id", "name", "gsymb")){
   vert_list <- vertex_attr_names(net)
   for(k in keep){

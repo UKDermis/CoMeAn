@@ -8,11 +8,6 @@
 #' @examples
 #' annmods()
 
-# Title     : TODO
-# Objective : TODO
-# Created by: nic
-# Created on: 29.11.21
-
 module_assignment <- function(graph, method="louvain"){
   # check what kind of clustering method we want to apply
   if(all(method=="louvain")) {
