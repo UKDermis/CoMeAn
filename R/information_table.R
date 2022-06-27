@@ -1,9 +1,12 @@
+
 #' Produces a .gml and .csv file based off the passed along igraph object
-#' Params:
+#'
 #' @import igraph
 #' @importFrom utils write.csv
+#'
 #' @param net (Required) The igraph object is beign worked on
 #' @param name (Required) Prefix for the produced table and .gml files
+#'
 #' @keywords produces_csv
 #' @export
 #' @examples

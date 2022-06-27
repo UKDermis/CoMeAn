@@ -1,14 +1,19 @@
 #' Pearson co-expression network Annotate modules with GO terms (from the Clusterprofiler package)
 #'
-#' Annotate gene co-expression network modules, write GO term table and dotplots to working directory. Specific to HHUDermNetA::pneteset output
+#' Annotate gene co-expression network modules, write GO term table and dotplots to working directory.
+#' Specific to HHUDermNetA::pneteset output
+#'
 #' @import org.Hs.eg.db
 #' @importFrom utils write.table
 #' @importFrom clusterProfiler enrichGO
 #' @importFrom dplyr bind_rows
+#'
 #' @param in_graph (Required) igraph object to annotate
-#' @param univ_genes (Required) list of HGNC gene symbols: background set for enrichment tests. Could be all human gene names, or gene names from the microarray/RNA-seq input matrix.
+#' @param univ_genes (Required) list of HGNC gene symbols: background set for enrichment tests.
+#'                      Could be all human gene names, or gene names from the microarray/RNA-seq input matrix.
 #' @param outnam (Required) output base filename of significant go terms table
 #' @param pcut (Optional) adjusted p-value cutoff. Default=0.05
+#'
 #' @keywords co-expression network igraph clusterprofiler
 #' @export
 #' @examples

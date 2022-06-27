@@ -1,9 +1,11 @@
+
 #' Module distance metrics
 #'
 #' Returns closest and farthest modules.
 #' @param heatmap (Optional) Array, containing the distances between modules
 #' @param g1_modules (Optional) List of Strings, names of the modules from the first grapg
 #' @param g2_modules (Optional) List of Strings, names of the modules from the second grapg
+#'
 #' @keywords produces_graph, helper-function
 #' @export
 #' @examples

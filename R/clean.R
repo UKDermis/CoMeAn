@@ -1,7 +1,11 @@
+
 #' Removes all vertex attributes except for default or user-specified attributes.
 #' @import igraph
+#'
 #' @param net (Required) The igraph object that is supposed to loose all but the first two vertex attributes
-#' @param keep (Optional) String-Vector that contains the vertex attributes you want to keep. Default is ("id", "name", "gsymb")
+#' @param keep (Optional) String-Vector that contains the vertex attributes you want to keep.
+#'                    Default is ("id", "name", "gsymb")
+#'
 #' @keywords helper-function
 #' @export
 #' @examples

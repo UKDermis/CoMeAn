@@ -1,10 +1,13 @@
 #' Single gene and neigbourhood analysis
+#' Extracts a number of values for a specific vertex (read, gene) from the graph,
+#' returns a vector containing the neighborhood graph, as well as the gene's module membership,
+#' node degree, and hubscore.
 #'
-#' Extracts a number of values for a specific vertex (read, gene) from the graph, returns a vector containing the neighborhood graph, as well as the gene's module membership, node degree, and hubscore.
-#' Params:
 #' @import igraph
+#'
 #' @param graph (Required) The igraph object that's being analyized
 #' @param gene_name (Required) Strig name of the vertex that will be analyzed
+#'
 #' @keywords helper-function analysis
 #' @export
 #' @examples

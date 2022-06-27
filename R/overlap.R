@@ -1,7 +1,13 @@
-# Title     : TODO
-# Objective : TODO
-# Created by: nic
-# Created on: 29.11.21
+
+#' Returns the overlap between two networks, based off shared vertices
+#'
+#' @param net1 (required): igraph object, one of the two networks being compared
+#' @param net2 (required): igraph object, the other of the two networks being compared
+#'
+#' @keywords helper-function
+#' @export
+#' @examples
+#' annmods()
 
 library(igraph)
 library(tibble)
@@ -11,16 +17,7 @@ library(data.table)
 library(ggplot2)
 library(Rfast)
 
-#' Returns the overlap between two networks, based off shared vertices
-#' Params:
-#' @param (required) net1: igraph object, one of the two networks being compared
-#' @param (required) net2: igraph object, the other of the two networks being compared
-#' Returns:
-#' int: igraph object, Interesction between the two networks
-#' @keywords helper-function
-#' @export
-#' @examples
-#' annmods()
+
 overlap <- function(net1, net2){
   int <- intersection(net1, net2, byname=TRUE, keep.all.vertices = FALSE)
 

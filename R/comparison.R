@@ -1,15 +1,18 @@
+
 #' net_comparison
-#'
 #' Compares two graphs based off datastructures found via unsupervised learning
+#'
 #' @import igraph
 #' @importFrom tidyr gather
 #' @importFrom matrixStats colMaxs rowMaxs
+#'
 #' @param file1 (Required) String, name of the file to be loaded. Default is "AdL"
 #' @param file2 (Required) String, name of the file to be loaded. Default is "PsoL"
 #' @param min_dist (Optional) Float, value the edges/connctions need to larger than to be kept
 #' @param cwd (Optional) String, current working directory. Where to find the file. Default is "./PAP/data/"
 #' @param format1 (Optional) String, specifies the file format. Default is "gml"
 #' @param format2 (Optional) String, specifies the file format. Default is "gml"
+#'
 #' @keywords produces_plot
 #' @export
 #' @examples

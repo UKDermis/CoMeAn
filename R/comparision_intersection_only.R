@@ -1,12 +1,14 @@
+
 #' Graph intersection comparison
-#'
 #' Compares two graphs based on their overlap, based off datastructures found via unsupervised learning.
+#'
 #' @param file1 (Required) String, name of the file to be loaded. Default is "AdL"
 #' @param file2 (Required) String, name of the file to be loaded. Default is "PsoL"
 #' @param min_dist (Optional) Float, value the edges/connctions need to larger than to be kept
 #' @param cwd (Optional) String, current working directory. Where to find the file. Default is "./PAP/data/"
 #' @param format1 (Optional) String, specifies the file format. Default is "gml"
 #' @param format2 (Optional) String, specifies the file format. Default is "gml"
+#'
 #' @keywords analysis_function
 #' @export
 #' @examples

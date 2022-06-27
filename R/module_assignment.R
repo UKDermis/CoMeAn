@@ -1,8 +1,12 @@
+
 #' Module detection
 #' Perform a clustering method on graph, returns a graph with module vertex attribute.
+#'
 #' @import igraph
+#'
 #' @param graph (Required) The igraph object is beign worked on
 #' @param method (Optional) String, indicates the clustering method. Default: louvain
+#'
 #' @keywords helper-function
 #' @export
 #' @examples

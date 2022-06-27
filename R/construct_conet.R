@@ -1,5 +1,5 @@
+
 #' Pearson co-expression network from gene expression matrix
-#'
 #' Pearson correlation network based on: 1, gml network file. 2, gene cluster memberships and scores csv
 #' table. 3, network communities plot (png). 4, network plot SkinSig database overlay (png). Writes to disk.
 #'
@@ -9,15 +9,22 @@
 #' @importFrom graphics plot
 #' @importFrom stats as.dist cor setNames
 #' @importFrom graphics legend
+#'
 #' @param exmat (Required) Input gene expression matrix. Row names must be HGNC gene symbols.
 #' @param outnam (Required) Output base filename for network, table and images files
 #' @param cutcor (Optional) correlation value cutoff. Default=0.8
 #' @param ndeg (Optional) node degree cutoff (integer). Default=1
-#' @param negcors (Optional) Boolean; include both negative and positive corrs (TRUE) or only positive (FALSE). Default=FALSE
-#' @param annottable (Optional) Name of gene signature table. Currently the SkinSig pre-formatted table is supported. Default= "SkinSigPATH_toENSG"
-#' @param plot_signature_overlay (Optional) Draw png plot of gene signature enrichment. May crash/take long on low-spec computers. Default=FALSE
-#' @param layout (Optional) Define igraph layout of output graphs. For negcors=T, usually layout_as_star, layout_as_tree are preferred. Default= layout_with_fr
-#' @param compsiz (Optional) Define minimum component size under which to discard small components (disconnected subgraphs). Default = 3
+#' @param negcors (Optional) Boolean; include both negative and positive corrs (TRUE) or only positive (FALSE).
+#'                      Default=FALSE
+#' @param annottable (Optional) Name of gene signature table. Currently the SkinSig pre-formatted table is supported.
+#'                      Default= "SkinSigPATH_toENSG"
+#' @param plot_signature_overlay (Optional) Draw png plot of gene signature enrichment.
+#'                      May crash/take long on low-spec computers. Default=FALSE
+#' @param layout (Optional) Define igraph layout of output graphs. For negcors=T, usually layout_as_star,
+#'                      layout_as_tree are preferred. Default= layout_with_fr
+#' @param compsiz (Optional) Define minimum component size under which to discard small components
+#'                      (disconnected subgraphs). Default = 3
+#'
 #' @keywords co-expression network igraph Biobase clusterprofiler org.Hs.eg.db
 #' @export
 #' @examples

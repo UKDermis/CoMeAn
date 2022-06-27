@@ -1,14 +1,15 @@
 
 #' Generates new modules for an igraph object and then compares novel modules to the original modules
-#' Params:
+#'
 #' @param file (Optional) String, name of the file to be loaded. Default is "AdL"
 #' @param min_dist (Optional)  Float, value the edges/connctions need to larger than to be kept
 #' @param cwd (Optional) String, current working directory. Where to find the file. Default is "./PAP/data/"
 #' @param format (Optional)  String, specifies the file format. Default is "gml"
+#'
 #' @keywords produces_plot
 #' @export
 #' @examples
-#' self_comparison()
+#' annmods()
 #' TODO: Add variable to control used distance algorithm, add further analysis
 
 

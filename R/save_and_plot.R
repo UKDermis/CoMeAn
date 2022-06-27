@@ -1,10 +1,14 @@
+
 #' Helper function. Plots the passed .csv file and then saves the graph
+#'
 #' @import ggplot2
+#'
 #' @param file1 (Required) String, name of the first loaded file
 #' @param file2 (Required) String, name of the second loaded file
 #' @param filename (Required) String, name of the file that the graph will be saved to
 #' @param hmap (Required) The heatmap filename to output.
 #' @param cwd (Optional) String, current working directory. Where to find the file. Default is "./PAP/data/out/"
+#'
 #' @keywords helper-function
 #' @export
 #' @examples

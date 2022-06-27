@@ -1,7 +1,15 @@
-# Title     : TODO
-# Objective : TODO
-# Created by: nic
-# Created on: 29.11.21
+
+#' Calculates the hamming distance between two igraph objects
+#'
+#' @param net1 (required): One of the two igraph objects beign compared
+#' @param net2 (required): The other igraph object being compared
+#' @param min_dist (required): float; value indicating if furher analysis should be done
+#' @param method (optional): String, sets the comparision algorithm. Default: "Overlap"
+#'
+#' @keywords helper-function
+#' @export
+#' @examples
+#' annmods()
 
 library(igraph)
 library(tibble)
@@ -17,18 +25,6 @@ source("PAP/R/hamming_dist_e_count.R")
 source("PAP/R/hamming_dist_e_weight.R")
 source("PAP/R/hamming_dist_v_count.R")
 
-#' Calculates the hamming distance between two igraph objects
-#' Params:
-#' @param (required) net1: One of the two igraph objects beign compared
-#' @param (required) net2: The other igraph object being compared
-#' @param (required) min_dist: float; value indicating if furher analysis should be done
-#' @param (optional) method: String, sets the comparision algorithm. Default: "Overlap"
-#' Returns:
-#' dist: Float, the distance between the two passed modules
-#' @keywords helper-function
-#' @export
-#' @examples
-#' annmods()
 module_comparision <- function(g1, g2, method="Overlap"){
   if(method == "overlap"){
      dist <- dist_overlap_size(g1, g2)

@@ -1,10 +1,9 @@
 
 #' Returns the hamming-distance between two networks based off the sum of the edge-weights
-#' Params:
-#' @param (required) net1: igraph object, one of the two networks being compared
-#' @param (required) net2: igraph object, the other of the two networks being compared
-#' Returns:
-#' dist: Float, distance between the two igraph objects.
+#'
+#' @param net1 (required): igraph object, one of the two networks being compared
+#' @param net2 (required): igraph object, the other of the two networks being compared
+#'
 #' @keywords helper-function
 #' @export
 #' @examples
