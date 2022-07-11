@@ -12,6 +12,7 @@
 #' @param cwd (Optional) String, current working directory. Where to find the file. Default is "./PAP/data/"
 #' @param format1 (Optional) String, specifies the file format. Default is "gml"
 #' @param format2 (Optional) String, specifies the file format. Default is "gml"
+#' @param overlap (Optional) String, specifies the method used to calculate module distance. Default is "Overlap"
 #'
 #' @keywords produces_plot
 #' @export
@@ -34,7 +35,8 @@ net_comparison <- function(graph1=AD_graph,
                            graph2=PSO_graph,
                            file1="AD",
                            file2="PSO",
-                           min_dist=0.75){
+                           min_dist=0.75,
+                           overlap="Overlap"){
 
   # # Clean graphs
   # graph1 <- clean(graph1)
@@ -63,7 +65,7 @@ net_comparison <- function(graph1=AD_graph,
     v1 <- V(graph1)[which(V(graph1)$module == m1)]
     for(m2 in g2_modules){
       v2 <- V(graph2)[which(V(graph2)$module == m2)]
-      heatmap_base[i, j] <- module_comparision(induced_subgraph(graph1, v1), induced_subgraph(graph2, v2), min_dist)
+      heatmap_base[i, j] <- module_comparision(induced_subgraph(graph1, v1), induced_subgraph(graph2, v2), min_dist, overlap)
       j <- j+1
     }
     i <- i+1

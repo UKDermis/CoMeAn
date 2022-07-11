@@ -8,13 +8,14 @@
 #' @param cwd (Optional) String, current working directory. Where to find the file. Default is "./PAP/data/"
 #' @param format1 (Optional) String, specifies the file format. Default is "gml"
 #' @param format2 (Optional) String, specifies the file format. Default is "gml"
+#' @param overlap (Optional) String, specifies the method used to calculate module distance. Default is "Overlap"
 #'
 #' @keywords analysis_function
 #' @export
 #' @examples
 #' annmods()
 
-comparison_intersection_only <- function(file1="AdL", file2="PsoL", min_dist=0.75, cwd="./PAP/data/", format1="gml", format2="gml"){
+comparison_intersection_only <- function(file1="AdL", file2="PsoL", min_dist=0.75, cwd="./PAP/data/", format1="gml", format2="gml", overlap="Overlap"){
   graph1 <- read_in(file1, cwd=cwd, format=format1)
   graph2 <- read_in(file2, cwd=cwd, format=format2)
 
@@ -51,7 +52,7 @@ comparison_intersection_only <- function(file1="AdL", file2="PsoL", min_dist=0.7
     v1 <- V(graph1)[which(V(graph1)$module == m1)]
     for(m2 in g2_modules){
       v2 <- V(graph2)[which(V(graph2)$module == m2)]
-      heatmap_base[i, j] <- module_comparision(induced_subgraph(graph1, v1), induced_subgraph(graph2, v2), min_dist)
+      heatmap_base[i, j] <- module_comparision(induced_subgraph(graph1, v1), induced_subgraph(graph2, v2), min_dist, overlap)
       j <- j+1
     }
     i <- i+1

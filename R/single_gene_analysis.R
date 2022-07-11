@@ -15,15 +15,15 @@
 
 single_gene_analysis <- function(graph, gene_name) {
 
-  selected_node <- V(graph)[name %in% c(gene_name)]
+  selected_nodes <- V(graph)[name %in% c(gene_name)]
 
-  node_enviorn <- ego(graph, order=1, nodes = selected_node,
+  node_enviorn <- ego(graph, order=1, nodes = selected_nodes,
                       mode = "all",
                       mindist = 0)
 
   subgraph <- induced_subgraph(graph, unlist(node_enviorn))
 
-  rtn <- c(subgraph,
+  rtn <- c(V(subgraph)$name,
            V(graph)[gene_name]$module,
            V(graph)[gene_name]$degree,
            V(graph)[gene_name]$hubscore)
