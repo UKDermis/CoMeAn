@@ -9,13 +9,6 @@
 #' @examples
 #' annmods()
 #'
-library(igraph)
-library(tibble)
-library(tidyr)
-library(tidyverse)
-library(data.table)
-library(ggplot2)
-library(Rfast)
 
 hamming_dist_e_count <- function(net1, net2){
   int <- overlap(net1, net2)

@@ -13,14 +13,6 @@
 #' annmods()
 #' TODO: add use for mode/add different modes
 
-library(igraph)
-library(tibble)
-library(tidyr)
-library(tidyverse)
-library(data.table)
-library(ggplot2)
-library(Rfast)
-
 source("PAP/R/overlap.R")
 source("PAP/R/module_assignment.R")
 source("PAP/R/read_in.R")

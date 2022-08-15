@@ -9,15 +9,6 @@
 #' @examples
 #' annmods()
 
-library(igraph)
-library(tibble)
-library(tidyr)
-library(tidyverse)
-library(data.table)
-library(ggplot2)
-library(Rfast)
-
-
 overlap <- function(net1, net2){
   int <- intersection(net1, net2, byname=TRUE, keep.all.vertices = FALSE)
 

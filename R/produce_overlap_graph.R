@@ -12,14 +12,6 @@
 #' @examples
 #' annmods()
 
-library(igraph)
-library(tibble)
-library(tidyr)
-library(tidyverse)
-library(data.table)
-library(ggplot2)
-library(Rfast)
-
 source("PAP/R/read_in.R")
 source("PAP/R/overlap.R")
 

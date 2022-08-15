@@ -8,14 +8,6 @@
 #' @examples
 #' annmods()
 
-library(igraph)
-library(tibble)
-library(tidyr)
-library(tidyverse)
-library(data.table)
-library(ggplot2)
-library(Rfast)
-
 colMax <- function(data){
   vec <- sapply(data, max, na.rm = TRUE)
   return(vec)

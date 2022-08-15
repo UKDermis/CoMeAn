@@ -19,6 +19,14 @@
 #' @examples
 #' annmods()
 
+library(igraph)
+library(tibble)
+library(tidyr)
+library(tidyverse)
+library(data.table)
+library(ggplot2)
+library(Rfast)
+
 annmods <- function(in_graph, univ_genes, outnam, pcut=0.05){
 
 # GO annotation per cluster

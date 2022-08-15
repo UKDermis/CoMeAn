@@ -11,14 +11,6 @@
 #' @examples
 #' annmods()
 
-library(igraph)
-library(tibble)
-library(tidyr)
-library(tidyverse)
-library(data.table)
-library(ggplot2)
-library(Rfast)
-
 source("PAP/R/dist_overlap_size.R")
 source("PAP/R/hamming_dist_abs_e_weight.R")
 source("PAP/R/hamming_dist_e_count.R")

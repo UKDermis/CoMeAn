@@ -12,6 +12,13 @@
 #' annmods()
 #' TODO: Add variable to control used distance algorithm, add further analysis
 
+library(igraph)
+library(tibble)
+library(tidyr)
+library(tidyverse)
+library(data.table)
+library(ggplot2)
+library(Rfast)
 
 self_comparison <- function(file, min_dist=0.75, cwd="./", format="gml"){
   x <- c(cwd, file, "_new.", format)

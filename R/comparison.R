@@ -31,6 +31,14 @@
 # Objective : Provide a number of functions to compare two (or more) networks
 # Created by: Nicholas Schmitt
 
+library(igraph)
+library(tibble)
+library(tidyr)
+library(tidyverse)
+library(data.table)
+library(ggplot2)
+library(Rfast)
+
 net_comparison <- function(graph1=AD_graph,
                            graph2=PSO_graph,
                            file1="AD",
