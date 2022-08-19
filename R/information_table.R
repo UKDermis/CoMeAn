@@ -26,14 +26,5 @@ information_table <- function(graph, filename) {
 
   colnames(info_table) <- c("ID", "Gene_name", "module", "degree", "hub_score")
 
-  # # Save clustered graph object
-  # V(graph)$degree <- degrees
-  # V(graph)$hubscore <- unname(h_scores$vector)
-
- # write_graph(graph, file = paste0(filename, "_modules.gml"), format = "gml")
-
-  # # Save attributes table for further steps of the pipeline
-  # write.csv(info_table, file = paste0(filename, "_attibutes.csv"))
-
   return(info_table)
 }

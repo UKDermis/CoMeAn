@@ -46,18 +46,6 @@ net_comparison <- function(graph1=AD_graph,
                            min_dist=0.75,
                            overlap="Overlap"){
 
-  # # Clean graphs
-  # graph1 <- clean(graph1)
-  # graph2 <- clean(graph2)
-  #
-  # # Perform clustering /extract method from above
-  # graph1 <- module_assignment(graph1)
-  # graph2 <- module_assignment(graph2)
-
-  # Exchange graph1, graph2 to grapX_modules
-  info_table1 <- information_table(graph1, file1)
-  info_table2 <- information_table(graph2, file2)
-
   # do module-wise comparision if dist between modules above min_dist
   g1_modules <- unique(V(graph1)$module)
   g2_modules <- unique(V(graph2)$module)
@@ -79,15 +67,15 @@ net_comparison <- function(graph1=AD_graph,
     i <- i+1
   }
 
-  hmap <- heatmap_base %>% rownames_to_column() %>% gather(colname, distance, -rowname)
+  hmap <- heatmap_base %>% tibble::rownames_to_column() %>% gather(colname, distance, -rowname)
 
   names(hmap)[names(hmap) == "colname"] <- "Modules_PsoL"
   names(hmap)[names(hmap) == "rowname"] <- "Modules_AdL"
 
   save_and_plot(file1, file2,"comparision_heatmap.png", hmap)
 
-  maxcol <- colMaxs(heatmap_base)
-  maxrow <- rowMaxs(heatmap_base)
+  maxcol <- Rfast::colMaxs(heatmap_base)
+  maxrow <- Rfast::rowMaxs(heatmap_base)
 
   for(i in seq_len(ncol(heatmap_base))) {
     for(j in seq_len(nrow(heatmap_base))){
@@ -100,9 +88,7 @@ net_comparison <- function(graph1=AD_graph,
     }
   }
 
-  hmap_percent <- heatmap_base %>%
-    rownames_to_column() %>%
-    gather(colname, distance, -rowname)
+  hmap_percent <- heatmap_base %>% tibble::rownames_to_column() %>% tidyr::gather(colname, distance, -rowname)
 
   names(hmap_percent)[names(hmap_percent) == "colname"] <- "Modules_PsoL"
   names(hmap_percent)[names(hmap_percent) == "rowname"] <- "Modules_AdL"

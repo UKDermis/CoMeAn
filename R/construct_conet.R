@@ -31,11 +31,8 @@
 #' construct_conet()
 
 library(igraph)
-library(tibble)
-library(tidyr)
 library(tidyverse)
 library(data.table)
-library(ggplot2)
 library(Rfast)
 
 # TODO optional community plot

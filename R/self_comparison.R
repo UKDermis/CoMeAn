@@ -13,11 +13,8 @@
 #' TODO: Add variable to control used distance algorithm, add further analysis
 
 library(igraph)
-library(tibble)
-library(tidyr)
 library(tidyverse)
 library(data.table)
-library(ggplot2)
 library(Rfast)
 
 self_comparison <- function(file, min_dist=0.75, cwd="./", format="gml"){
@@ -52,8 +49,8 @@ self_comparison <- function(file, min_dist=0.75, cwd="./", format="gml"){
   }
 
   hmap <- heatmap_base %>%
-    rownames_to_column() %>%
-    gather(colname, distance, -rowname)
+    tibble::rownames_to_column() %>%
+    tidyr::gather(colname, distance, -rowname)
 
   names(hmap)[names(hmap) == "colname"] <- "Modules_Unsupervised_Learning"
   names(hmap)[names(hmap) == "rowname"] <- "Modules_Original"
@@ -65,19 +62,11 @@ self_comparison <- function(file, min_dist=0.75, cwd="./", format="gml"){
   heatmap_base <- ifelse(A1>A2,A1,A2)
 
   hmap_percent <- heatmap_base %>%
-    rownames_to_column() %>%
-    gather(colname, distance, -rowname)
+    tibble::rownames_to_column() %>%
+    tidyr::gather(colname, distance, -rowname)
 
   names(hmap_percent)[names(hmap_percent) == "colname"] <- "Modules_Unsupervised_Learning"
   names(hmap_percent)[names(hmap_percent) == "rowname"] <- "Modules_Original"
 
-  plt2 <- ggplot(hmap_percent, aes(x = Modules_Original, y = Modules_Unsupervised_Learning, fill = distance)) +
-    geom_tile()
-
-  ggsave(filename= "heatmap_percentage.png",
-       plot=plt2,
-       device='png',
-       dpi=75,
-       height=25,
-       width=25)
+  save_and_plot(file1, file2,"heatmap_percentage.png", hmap_percent)
 }

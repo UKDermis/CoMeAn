@@ -16,11 +16,8 @@
 #' annmods()
 
 library(igraph)
-library(tibble)
-library(tidyr)
 library(tidyverse)
 library(data.table)
-library(ggplot2)
 library(Rfast)
 
 comparison_intersection_only <- function(file1="AdL", file2="PsoL", min_dist=0.75, cwd="./PAP/data/", format1="gml", format2="gml", overlap="Overlap"){
@@ -68,15 +65,15 @@ comparison_intersection_only <- function(file1="AdL", file2="PsoL", min_dist=0.7
   write.csv(heatmap_base, file = "./PAP/data/out/Overlap_heatmap_vals.csv")
 
   filename <- "comparision_intersection_heatmap.png"
-  hmap <- heatmap_base %>% rownames_to_column() %>% gather(colname, distance, -rowname)
+  hmap <- heatmap_base %>% tibble::rownames_to_column() %>% tidyr::gather(colname, distance, -rowname)
 
   names(hmap)[names(hmap) == "colname"] <- "Modules_PsoL"
   names(hmap)[names(hmap) == "rowname"] <- "Modules_AdL"
 
   save_and_plot(file1, file2, filename, hmap)
 
-  maxcol <- colMaxs(heatmap_base)
-  maxrow <- rowMaxs(heatmap_base)
+  maxcol <- Rfast::colMaxs(heatmap_base)
+  maxrow <- Rfast::rowMaxs(heatmap_base)
 
   for(i in seq_len(ncol(heatmap_base))) {
     for(j in seq_len(nrow(heatmap_base))){
@@ -90,8 +87,8 @@ comparison_intersection_only <- function(file1="AdL", file2="PsoL", min_dist=0.7
   }
 
   hmap_percent <- heatmap_base %>%
-    rownames_to_column() %>%
-    gather(colname, distance, -rowname)
+    tibble::rownames_to_column() %>%
+    tidyr::gather(colname, distance, -rowname)
 
   write.csv(heatmap_base, file = "./PAP/data/Overlap_heatmap_percentage_vals.csv")
 
