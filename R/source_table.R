@@ -13,9 +13,9 @@
 #' annmods()
 #' TODO: add use for mode/add different modes
 
-source("PAP/R/overlap.R")
-source("PAP/R/module_assignment.R")
-source("PAP/R/read_in.R")
+source("CoMeAn/R/overlap.R")
+source("CoMeAn/R/module_assignment.R")
+source("CoMeAn/R/read_in.R")
 
 source_table <- function(file1="AdL", file2="PsoL", cwd="./PAP/data/", format1="gml", format2="gml"){
   graph1 <- read_in(file1, cwd=cwd, format=format1)

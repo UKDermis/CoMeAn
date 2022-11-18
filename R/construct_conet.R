@@ -24,6 +24,7 @@
 #'                      layout_as_tree are preferred. Default= layout_with_fr
 #' @param compsiz (Optional) Define minimum component size under which to discard small components
 #'                      (disconnected subgraphs). Default = 3
+#' @param plot (Optional) Boolean variable. Decides if the function will produces plots. Default = FALSE
 #'
 #' @keywords co-expression network igraph Biobase clusterprofiler org.Hs.eg.db
 #' @export
@@ -34,6 +35,7 @@ library(igraph)
 library(tidyverse)
 library(data.table)
 library(Rfast)
+source("R/corFast.R")
 
 # TODO optional community plot
 
@@ -44,14 +46,37 @@ construct_conet <- function(exmat, outnam,
                      annottable=SkinSigPATH_toENSG,
                      plot_signature_overlay=F,
                      layout=layout_with_fr,
-                     compsiz=3){
-
+                     compsiz=3,
+                     plot=FALSE){
+  #TODO: set exmat to loading here (or separate script), then calculating corr, or load corr directly
+  #TODO: Add check that exmat is matrix, not dataframe
+  #TODO: Add to function signature;
+  default_colors <- FALSE
 
   # correlation
-  sset <- cor(t(exmat))
+  #TODO: is this the fastest function? If not, replace. Or check if there are things you can do
+  #TODO: Once calculation has been done, save, and load if done again
+  #TODO: Save on first run and load after
+  #TODO: Get current working dictonary
+  name <- paste0(outnam, "_corr.csv")
+  if(file.exists(name)){
+    sset <- data.matrix(read.csv(name, row.names = 1))
+    print("Data loaded from storage")
+  } else {
+    sset <- corFast(t(exmat))
+    utils::write.table(sset,
+              file = name,
+              sep = ",",
+              row.names = F,
+              dec=".",
+              quote = F)
+  }
+
 
   # Filter corr table
   diag(sset) <- 0
+  print(typeof(sset))
+  print(head(sset))
   sset <- sset[ abs(rowMaxs(sset)) >= cutcor, ]
   sset <- sset[ , colnames(sset) %in% rownames(sset)]
 
@@ -106,8 +131,9 @@ construct_conet <- function(exmat, outnam,
 
   Skinsgwcolors <- annottable
 
+  # TODO: number of columns of emtpy dataframe has to equal Skingwcolors -> how to automate?
   Skinsgwcolors <- rbind(Skinsgwcolors,
-                         setNames(data.frame("NA", "NA", "None"),
+                         setNames(data.frame("NA", "NA", "None", "NA", "NA", "NA"),
                                   colnames(Skinsgwcolors)))
 
   scol <- setNames(data.frame(levels(as.factor(Skinsgwcolors$SkinSig.signature)),
@@ -115,12 +141,22 @@ construct_conet <- function(exmat, outnam,
                    "skinsig")
 
   # Alternative, contrasted coloring, hard-coded
-  scol$scols <- c("black", "#68b2f7", "orange", "#eda65f",
+  #TODO: color-coding is meant to go for each skin-segment;
+  # assumes that each Skin segment has been assigned a color via hard-coding
+  # -> TODO: Automate!
+  colors <- c("black", "#68b2f7", "orange", "#eda65f",
                   "#46f2a2", "#c76e20", "#d12a6d", "#d41f15",
                   "darkblue", "#79ab22", "pink", "#e647d5",
                   "#821522", "magenta", "#f21679", "#81eb3b",
                   "#f5a6d4", "#d1b0c3", "#f0210e", "white",
                   "lightgrey")
+  names(colors) <- unique(SkinSig_annotation$SkinSig.signature)
+  N <- nrow(Skinsgwcolors)-1
+  scols <- vector("list", N)
+  for(i in 1:N){
+    scols[[i]] <- colors[[SkinSig_annotation$SkinSig.signature[i]]]
+  }
+  scol$scols <- scols
 
   Skinsgwcolors <- merge(Skinsgwcolors, as.matrix(scol),
                          by.x = "SkinSig.signature",
@@ -144,9 +180,14 @@ construct_conet <- function(exmat, outnam,
   skns1 <- data.frame(skns1, stringsAsFactors=F)
   skns1$SkinSig.signature[ is.na(skns1$SkinSig.signature) ] <- "None"
   skns1 <- data.frame(skns1, stringsAsFactors=F)
-  skns1$scols[ is.na(skns1$scols) ] <- "lightgrey"
+
+  if(default_colors){
+    skns1$scols[ is.na(skns1$scols) ] <- "lightgrey"
+  }
+
   rownames(skns1) <- skns1$vertnam
   skns1 <- skns1[ (V(sset)$name), ]
+
   # Finally add as igraph attributes
   V(sset)$sknsg <- as.character(skns1$SkinSig.signature)
   V(sset)$gsymb <- skns1$vertnam
@@ -157,7 +198,7 @@ construct_conet <- function(exmat, outnam,
   if (negcors) {
 
 
-  print("no community detection due to negative edge weights")
+    print("no community detection due to negative edge weights")
 
     clvtab <- setNames(data.frame(V(sset)$name, V(sset)$gsymb,
                                   V(sset)$sknsg, V(sset)$gcol,
@@ -202,9 +243,9 @@ construct_conet <- function(exmat, outnam,
 
   utils::write.table(clvtab,
               file = paste0(outnam, "_nodestats.csv"),
-              sep = "\t",
+              sep = ",",
               row.names = F,
-              dec=",",
+              dec=".",
               quote = F)
 
 
@@ -214,47 +255,48 @@ construct_conet <- function(exmat, outnam,
 
   vii2 <- layout(sset)
 
-  if (negcors) {
+  if(plot){
+    if (negcors) {
 
     png(filename = paste0(outnam, "Simple.png"),
         height = 2000, width = 2000)
     plot(sset, vertex.label=" ", vertex.size=2, layout=vii2)
     dev.off()
 
-  } else {
+    } else {
 
-  png(filename = paste0(outnam, "Comms.png"),
-      height = 2000, width = 2000)
-    plot(clv, sset, vertex.label=" ", vertex.size=2, layout=vii2)
-  dev.off()
-
-  }
-
-  # SkinSig plot
-  if (plot_signature_overlay) {
-    png(filename = paste0(outnam, "SkinSig.png"),
-        height = 3000, width = 3000)
-    plot(sset,
-       vertex.label=V(sset)$gsymb,
-       vertex.label.color="black",
-       vertex.color=V(sset)$gcol,
-       vertex.size=2,
-       layout=vii2)
-    legend("bottomright", "(x,y)",
-         (scol$skinsig),
-         fill=(scol$scols),
-         pt.cex=5,
-         cex=5, bty="n",
-         ncol=2)
-
+    png(filename = paste0(outnam, "Comms.png"),
+        height = 2000, width = 2000)
+      plot(clv, sset, vertex.label=" ", vertex.size=2, layout=vii2)
     dev.off()
 
-    }  else {
-      print("SkinSig not plotted")
+    }
+
+    # SkinSig plot
+    if (plot_signature_overlay) {
+      png(filename = paste0(outnam, "SkinSig.png"),
+          height = 3000, width = 3000)
+      plot(sset,
+         vertex.label=V(sset)$gsymb,
+         vertex.label.color="black",
+         vertex.color=V(sset)$gcol,
+         vertex.size=2,
+         layout=vii2)
+      legend("bottomright", "(x,y)",
+           (scol$skinsig),
+           fill=(scol$scols),
+           pt.cex=5,
+           cex=5, bty="n",
+           ncol=2)
+
+      dev.off()
+
+      }  else {
+        print("SkinSig not plotted")
+    }
   }
 
-
-    closeAllConnections()
+  closeAllConnections()
 
   return(sset)
 

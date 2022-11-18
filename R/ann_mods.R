@@ -39,16 +39,19 @@ comsum <- split(comsum, with(comsum,
                 drop = TRUE)
 
 goenr1 <- lapply(comsum,
-                 function(x)(enrichGO(
-                   gene          = x$vertnam ,
-                   universe      = univ_genes,
-                   OrgDb         = org.Hs.eg.db,
-                   ont           = "BP",
-                   pAdjustMethod = "BH",
-                   pvalueCutoff  = 0.01,
-                   qvalueCutoff  = 0.05,
-                   readable      = FALSE,
-                   keyType       = 'SYMBOL')))
+                 function(x)(
+                   enrichGO(
+                    gene          = x$vertnam,
+                    universe      = univ_genes,
+                    OrgDb         = org.Hs.eg.db,
+                    ont           = "BP",
+                    pAdjustMethod = "BH",
+                    pvalueCutoff  = 0.01,
+                    qvalueCutoff  = 0.05,
+                    readable      = FALSE,
+                    keyType       = 'SYMBOL')
+                   )
+                )
 
 
 # Create dotplots per module before filtering
