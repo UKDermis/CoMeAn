@@ -2,11 +2,18 @@
 % Please edit documentation in R/comparision_intersection_only.R
 \name{comparison_intersection_only}
 \alias{comparison_intersection_only}
-\title{Graph intersection comparison}
+\title{Graph intersection comparison
+Compares two graphs based on their overlap, based off datastructures found via unsupervised learning.}
 \usage{
-comparison_intersection_only(file1 = "AdL", file2 = "PsoL",
-  min_dist = 0.75, cwd = "./PAP/data/", format1 = "gml",
-  format2 = "gml")
+comparison_intersection_only(
+  file1 = "AdL",
+  file2 = "PsoL",
+  min_dist = 0.75,
+  cwd = "./PAP/data/",
+  format1 = "gml",
+  format2 = "gml",
+  overlap = "Overlap"
+)
 }
 \arguments{
 \item{file1}{(Required) String, name of the file to be loaded. Default is "AdL"}
@@ -20,8 +27,11 @@ comparison_intersection_only(file1 = "AdL", file2 = "PsoL",
 \item{format1}{(Optional) String, specifies the file format. Default is "gml"}
 
 \item{format2}{(Optional) String, specifies the file format. Default is "gml"}
+
+\item{overlap}{(Optional) String, specifies the method used to calculate module distance. Default is "Overlap"}
 }
 \description{
+Graph intersection comparison
 Compares two graphs based on their overlap, based off datastructures found via unsupervised learning.
 }
 \examples{

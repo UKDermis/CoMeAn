@@ -11,11 +11,11 @@
 #' @examples
 #' annmods()
 
-source("PAP/R/dist_overlap_size.R")
-source("PAP/R/hamming_dist_abs_e_weight.R")
-source("PAP/R/hamming_dist_e_count.R")
-source("PAP/R/hamming_dist_e_weight.R")
-source("PAP/R/hamming_dist_v_count.R")
+# source("CoMeAn/R/dist_overlap_size.R")
+# source("CoMeAn/R/hamming_dist_abs_e_weight.R")
+# source("CoMeAn/R/hamming_dist_e_count.R")
+# source("CoMeAn/R/hamming_dist_e_weight.R")
+# source("CoMeAn/R/hamming_dist_v_count.R")
 
 module_comparision <- function(g1, g2, method="Overlap"){
   if(method == "overlap"){

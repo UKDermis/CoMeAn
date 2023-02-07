@@ -2,7 +2,8 @@
 % Please edit documentation in R/dist_overlap_size.R
 \name{dist_overlap_size}
 \alias{dist_overlap_size}
-\title{Overlap between graphs}
+\title{Overlap between graphs
+Returns the size of the overlap (vertex count)}
 \usage{
 dist_overlap_size(net1, net2)
 }
@@ -12,6 +13,7 @@ dist_overlap_size(net1, net2)
 \item{net2}{(Required) igraph object, the other of the two networks being compared}
 }
 \description{
+Overlap between graphs
 Returns the size of the overlap (vertex count)
 }
 \examples{

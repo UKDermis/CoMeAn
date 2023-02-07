@@ -30,11 +30,6 @@
 #' @examples
 #' construct_conet()
 
-library(igraph)
-library(tidyverse)
-library(data.table)
-library(Rfast)
-
 # TODO optional community plot
 
 construct_conet <- function(exmat, outnam,
