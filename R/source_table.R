@@ -1,4 +1,3 @@
-
 #' Reads in two files and produces a .csv file based off the module_assignment method
 #'
 #' @param file1 (optional): String, name of the file to be loaded. Default is "AdL"
