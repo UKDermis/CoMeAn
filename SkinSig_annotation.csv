@@ -1,0 +1,887 @@
+HGNC.symbol,Gene.decription,SkinSig.signature,Note1,Note2,Note3
+CHAC1,ChaC glutathione-specific gamma-glutamylcyclotransferase 1,Hair follicle
+DNAJC6,DnaJ heat shock protein family (Hsp40) member C6,Hair follicle
+DSG4,desmoglein 4,Hair follicle
+GPRC5D,G protein-coupled receptor class C group 5 member D,Hair follicle
+HOXC13,homeobox C13,Hair follicle
+KRT25,keratin 25,Hair follicle
+KRT27,keratin 27,Hair follicle
+KRT31,keratin 31,Hair follicle
+KRT32,keratin 32,Hair follicle
+KRT33A,keratin 33A,Hair follicle
+KRT33B,keratin 33B,Hair follicle
+KRT34,keratin 34,Hair follicle
+KRT35,keratin 35,Hair follicle
+KRT36,keratin 36,Hair follicle
+KRT40,keratin 40,Hair follicle
+KRT71,keratin 71,Hair follicle
+KRT74,keratin 74,Hair follicle
+KRT75,keratin 75,Hair follicle
+KRT81,keratin 81,Hair follicle
+KRT82,keratin 82,Hair follicle
+KRT83,keratin 83,Hair follicle
+KRT85,keratin 85,Hair follicle
+KRT86,keratin 86,Hair follicle
+KRTAP10-11,keratin associated protein 10-11,Hair follicle
+KRTAP10-12,keratin associated protein 10-12,Hair follicle
+KRTAP1-1,keratin associated protein 1-1,Hair follicle
+KRTAP11-1,keratin associated protein 11-1,Hair follicle
+KRTAP1-3,keratin associated protein 1-3,Hair follicle
+KRTAP13-1,keratin associated protein 13-1,Hair follicle
+KRTAP1-5,keratin associated protein 1-5,Hair follicle
+KRTAP17-1,keratin associated protein 17-1,Hair follicle
+KRTAP19-1,keratin associated protein 19-1,Hair follicle
+KRTAP2-1,keratin associated protein 2-1,Hair follicle
+KRTAP2-2,keratin associated protein 2-2,Hair follicle
+KRTAP2-3,keratin associated protein 2-3,Hair follicle
+KRTAP2-4,keratin associated protein 2-4,Hair follicle
+KRTAP3-1,keratin associated protein 3-1,Hair follicle
+KRTAP3-2,keratin associated protein 3-2,Hair follicle
+KRTAP3-3,keratin associated protein 3-3,Hair follicle
+KRTAP4-1,keratin associated protein 4-1,Hair follicle
+KRTAP4-11,keratin associated protein 4-11,Hair follicle
+KRTAP4-12,keratin associated protein 4-12,Hair follicle
+KRTAP4-2,keratin associated protein 4-2,Hair follicle
+KRTAP4-3,keratin associated protein 4-3,Hair follicle
+KRTAP4-4,keratin associated protein 4-4,Hair follicle
+KRTAP4-5,keratin associated protein 4-5,Hair follicle
+KRTAP4-6,keratin associated protein 4-6,Hair follicle
+KRTAP4-7,keratin associated protein 4-7,Hair follicle
+KRTAP4-8,keratin associated protein 4-8,Hair follicle
+KRTAP4-9,keratin associated protein 4-9,Hair follicle
+KRTAP5-8,keratin associated protein 5-8,Hair follicle
+KRTAP8-1,keratin associated protein 8-1,Hair follicle
+KRTAP9-2,keratin associated protein 9-2,Hair follicle
+KRTAP9-3,keratin associated protein 9-3,Hair follicle
+KRTAP9-4,keratin associated protein 9-4,Hair follicle
+KRTAP9-9,keratin associated protein 9-9,Hair follicle
+LYG2,lysozyme g2,Hair follicle
+PADI3,peptidyl arginine deiminase 3,Hair follicle
+PRR9,proline rich 9,Hair follicle
+PSORS1C2,psoriasis susceptibility 1 candidate 2,Hair follicle
+S100A3,S100 calcium binding protein A3,Hair follicle
+TCHH,trichohyalin,Hair follicle
+ACAA1,acetyl-CoA acyltransferase 1,Sebaceous gland
+ACADM,acyl-CoA dehydrogenase,Sebaceous gland, C-4 to C-12 straight chain
+ACAT2,acetyl-CoA acetyltransferase 2,Sebaceous gland
+ACO1,aconitase 1,Sebaceous gland
+ACOT1,acyl-CoA thioesterase 1,Sebaceous gland
+ACOX2,acyl-CoA oxidase 2,Sebaceous gland, branched chain
+ACSBG1,acyl-CoA synthetase bubblegum family member 1,Sebaceous gland
+ACSL1,acyl-CoA synthetase long-chain family member 1,Sebaceous gland
+ACSL5,acyl-CoA synthetase long-chain family member 5,Sebaceous gland
+ACSM3,acyl-CoA synthetase medium-chain family member 3,Sebaceous gland
+ACSS2,acyl-CoA synthetase short-chain family member 2,Sebaceous gland
+AGPAT3,1-acylglycerol-3-phosphate O-acyltransferase 3,Sebaceous gland
+ALOX15B,arachidonate 15-lipoxygenase,Sebaceous gland, type B
+APMAP,adipocyte plasma membrane associated protein,Sebaceous gland
+APOC1,apolipoprotein C-I,Sebaceous gland
+ATP5G3,ATP synthase,Sebaceous gland, H+ transporting, mitochondrial Fo complex subunit C3 (subunit 9)
+AWAT1,acyl-CoA wax alcohol acyltransferase 1,Sebaceous gland
+BCAT2,branched chain amino acid transaminase 2,Sebaceous gland
+BRI3BP,BRI3 binding protein,Sebaceous gland
+C1orf122,chromosome 1 open reading frame 122,Sebaceous gland
+CECR2,cat eye syndrome chromosome region,Sebaceous gland, candidate 2
+CHI3L1,chitinase 3 like 1,Sebaceous gland
+CIDEA,cell death-inducing DFFA-like effector a,Sebaceous gland
+CLMP,CXADR-like membrane protein,Sebaceous gland
+CRAT,carnitine O-acetyltransferase,Sebaceous gland
+CUX2,cut like homeobox 2,Sebaceous gland
+CYB5A,cytochrome b5 type A,Sebaceous gland
+CYP4F2,cytochrome P450 family 4 subfamily F member 2,Sebaceous gland
+CYP4F8,cytochrome P450 family 4 subfamily F member 8,Sebaceous gland
+DDC,dopa decarboxylase,Sebaceous gland
+DDO,D-aspartate oxidase,Sebaceous gland
+DGAT2,diacylglycerol O-acyltransferase 2,Sebaceous gland
+DHRS9,dehydrogenase/reductase (SDR family) member 9,Sebaceous gland
+EBP,emopamil binding protein (sterol isomerase),Sebaceous gland
+ELOVL3,ELOVL fatty acid elongase 3,Sebaceous gland
+ELOVL5,ELOVL fatty acid elongase 5,Sebaceous gland
+FA2H,fatty acid 2-hydroxylase,Sebaceous gland
+FADS1,fatty acid desaturase 1,Sebaceous gland
+FADS2,fatty acid desaturase 2,Sebaceous gland
+FAR2,fatty acyl-CoA reductase 2,Sebaceous gland
+FASN,fatty acid synthase,Sebaceous gland
+FBP1,fructose-bisphosphatase 1,Sebaceous gland
+FDPS,farnesyl diphosphate synthase,Sebaceous gland
+GABRA4,gamma-aminobutyric acid type A receptor alpha4 subunit,Sebaceous gland
+GAL,galanin/GMAP prepropeptide,Sebaceous gland
+GLDC,glycine decarboxylase,Sebaceous gland
+GLYATL1,glycine-N-acyltransferase like 1,Sebaceous gland
+HACL1,2-hydroxyacyl-CoA lyase 1,Sebaceous gland
+HADH,hydroxyacyl-CoA dehydrogenase,Sebaceous gland
+HAO2,hydroxyacid oxidase 2,Sebaceous gland
+HEATR4,HEAT repeat containing 4,Sebaceous gland
+HGD,homogentisate 1,Sebaceous gland,2-dioxygenase
+HLCS,holocarboxylase synthetase,Sebaceous gland
+HSD3B1,hydroxy-delta-5-steroid dehydrogenase,Sebaceous gland, 3 beta- and steroid delta-isomerase 1
+IDH1,isocitrate dehydrogenase 1 (NADP+),Sebaceous gland
+IDI1,isopentenyl-diphosphate delta isomerase 1,Sebaceous gland
+INSIG1,insulin induced gene 1,Sebaceous gland
+IPO5P1,importin 5 pseudogene 1,Sebaceous gland
+KNSTRN,kinetochore-localized astrin/SPAG5 binding protein,Sebaceous gland
+KRT79,keratin 79,Sebaceous gland
+LDHD,lactate dehydrogenase D,Sebaceous gland
+LINC01554,long intergenic non-protein coding RNA 1554,Sebaceous gland
+MDH1,malate dehydrogenase 1,Sebaceous gland
+METTL7B,methyltransferase like 7B,Sebaceous gland
+MGST1,microsomal glutathione S-transferase 1,Sebaceous gland
+MOGAT1,monoacylglycerol O-acyltransferase 1,Sebaceous gland
+MOGAT2,monoacylglycerol O-acyltransferase 2,Sebaceous gland
+MPC2,mitochondrial pyruvate carrier 2,Sebaceous gland
+MSMO1,methylsterol monooxygenase 1,Sebaceous gland
+MSRB1,methionine sulfoxide reductase B1,Sebaceous gland
+MVD,mevalonate diphosphate decarboxylase,Sebaceous gland
+NSDHL,NAD(P) dependent steroid dehydrogenase-like,Sebaceous gland
+OLAH,oleoyl-ACP hydrolase,Sebaceous gland
+PADI4,peptidyl arginine deiminase 4,Sebaceous gland
+PCCB,propionyl-CoA carboxylase beta subunit,Sebaceous gland
+PDE6A,phosphodiesterase 6A,Sebaceous gland
+PDHA1,pyruvate dehydrogenase (lipoamide) alpha 1,Sebaceous gland
+PECR,peroxisomal trans-2-enoyl-CoA reductase,Sebaceous gland
+PEX11A,peroxisomal biogenesis factor 11 alpha,Sebaceous gland
+PGRMC1,progesterone receptor membrane component 1,Sebaceous gland
+PKLR,pyruvate kinase,Sebaceous gland, liver and RBC
+PLIN5,perilipin 5,Sebaceous gland
+PM20D1,peptidase M20 domain containing 1,Sebaceous gland
+PNLDC1,PARN like,Sebaceous gland, ribonuclease domain containing 1
+PNPLA5,patatin like phospholipase domain containing 5,Sebaceous gland
+RDH11,retinol dehydrogenase 11 (all-trans/9-cis/11-cis),Sebaceous gland
+SC5D,sterol-C5-desaturase,Sebaceous gland
+SEC14L4,SEC14 like lipid binding 4,Sebaceous gland
+SGK2,serum/glucocorticoid regulated kinase 2,Sebaceous gland
+SLC25A35,solute carrier family 25 member 35,Sebaceous gland
+SOAT1,sterol O-acyltransferase 1,Sebaceous gland
+SYPL2,synaptophysin like 2,Sebaceous gland
+TF,transferrin,Sebaceous gland
+THRSP,thyroid hormone responsive,Sebaceous gland
+TMEM56,transmembrane protein 56,Sebaceous gland
+TMEM91,transmembrane protein 91,Sebaceous gland
+TMEM97,transmembrane protein 97,Sebaceous gland
+TMPRSS11E,transmembrane protease,Sebaceous gland, serine 11E
+TRIM55,tripartite motif containing 55,Sebaceous gland
+TST,thiosulfate sulfurtransferase,Sebaceous gland
+UBIAD1,UbiA prenyltransferase domain containing 1,Sebaceous gland
+UPB1,ureidopropionase,Sebaceous gland, beta
+ZNF117,zinc finger protein 117,Sebaceous gland
+ZNF43,zinc finger protein 43,Sebaceous gland
+ZP1,zona pellucida glycoprotein 1,Sebaceous gland
+ADCY8,adenylate cyclase 8 (brain),Eccrine sweat gland
+ADORA1,adenosine A1 receptor,Eccrine sweat gland
+AOC1,amine oxidase,Eccrine sweat gland, copper containing 1
+AQP5,aquaporin 5,Eccrine sweat gland
+ARFGEF3,ARFGEF family member 3,Eccrine sweat gland
+ATP1B1,ATPase Na+/K+ transporting subunit beta 1,Eccrine sweat gland
+ATP2A3,ATPase sarcoplasmic/endoplasmic reticulum Ca2+ transporting 3,Eccrine sweat gland
+ATP6V0A4,ATPase H+ transporting V0 subunit a4,Eccrine sweat gland
+ATP6V1B1,ATPase H+ transporting V1 subunit B1,Eccrine sweat gland
+CADPS2,Ca2+ dependent secretion activator 2,Eccrine sweat gland
+CAMK2N1,calcium/calmodulin dependent protein kinase II inhibitor 1,Eccrine sweat gland
+CEACAM1,carcinoembryonic antigen related cell adhesion molecule 1,Eccrine sweat gland
+CFTR,cystic fibrosis transmembrane conductance regulator,Eccrine sweat gland
+CHDH,choline dehydrogenase,Eccrine sweat gland
+CKMT2,creatine kinase,Eccrine sweat gland, mitochondrial 2
+CLDN10,claudin 10,Eccrine sweat gland
+CLDN3,claudin 3,Eccrine sweat gland
+CLDN7,claudin 7,Eccrine sweat gland
+CRACR2A,calcium release activated channel regulator 2A,Eccrine sweat gland
+CRACR2B,calcium release activated channel regulator 2B,Eccrine sweat gland
+CREB3L4,cAMP responsive element binding protein 3-like 4,Eccrine sweat gland
+CRISPLD1,cysteine rich secretory protein LCCL domain containing 1,Eccrine sweat gland
+DNER,delta/notch like EGF repeat containing,Eccrine sweat gland
+EDAR,ectodysplasin A receptor,Eccrine sweat gland
+ELF5,E74 like ETS transcription factor 5,Eccrine sweat gland
+EPCAM,epithelial cell adhesion molecule,Eccrine sweat gland
+ESRRG,estrogen related receptor gamma,Eccrine sweat gland
+ETV1,ETS variant 1,Eccrine sweat gland
+EVA1A,eva-1 homolog A,Eccrine sweat gland, regulator of programmed cell death
+FAM189A2,family with sequence similarity 189 member A2,Eccrine sweat gland
+FMO5,flavin containing monooxygenase 5,Eccrine sweat gland
+FOLR1,folate receptor 1 (adult),Eccrine sweat gland
+FOXI1,forkhead box I1,Eccrine sweat gland
+FRZB,frizzled-related protein,Eccrine sweat gland
+FZD1,frizzled class receptor 1,Eccrine sweat gland
+GABRP,gamma-aminobutyric acid type A receptor pi subunit,Eccrine sweat gland
+GALNT7,polypeptide N-acetylgalactosaminyltransferase 7,Eccrine sweat gland
+GNG7,G protein subunit gamma 7,Eccrine sweat gland
+GOT1,glutamic-oxaloacetic transaminase 1,Eccrine sweat gland
+GPR12,G protein-coupled receptor 12,Eccrine sweat gland
+GPR160,G protein-coupled receptor 160,Eccrine sweat gland
+GRB14,growth factor receptor bound protein 14,Eccrine sweat gland
+GRIA2,glutamate ionotropic receptor AMPA type subunit 2,Eccrine sweat gland
+HSD11B2,hydroxysteroid (11-beta) dehydrogenase 2,Eccrine sweat gland
+IQGAP2,IQ motif containing GTPase activating protein 2,Eccrine sweat gland
+ITPR1,inositol 1,Eccrine sweat gland,4,5-trisphosphate receptor type 1
+KCNK5,potassium two pore domain channel subfamily K member 5,Eccrine sweat gland
+KCNN4,potassium calcium-activated channel subfamily N member 4,Eccrine sweat gland
+KIAA1324,KIAA1324,Eccrine sweat gland
+KRT7,keratin 7,Eccrine sweat gland
+KRT8,keratin 8,Eccrine sweat gland
+MAP6,microtubule associated protein 6,Eccrine sweat gland
+MMP7,matrix metallopeptidase 7,Eccrine sweat gland
+NBEA,neurobeachin,Eccrine sweat gland
+NCALD,neurocalcin delta,Eccrine sweat gland
+OXGR1,oxoglutarate receptor 1,Eccrine sweat gland
+PADI2,peptidyl arginine deiminase 2,Eccrine sweat gland
+PDE9A,phosphodiesterase 9A,Eccrine sweat gland
+PDK3,pyruvate dehydrogenase kinase 3,Eccrine sweat gland
+PIP5K1B,phosphatidylinositol-4-phosphate 5-kinase,Eccrine sweat gland, type I, beta
+PLA2R1,phospholipase A2 receptor 1,Eccrine sweat gland
+PLCB1,phospholipase C beta 1,Eccrine sweat gland
+PPARGC1A,PPARG coactivator 1 alpha,Eccrine sweat gland
+PPP1R1B,protein phosphatase 1 regulatory inhibitor subunit 1B,Eccrine sweat gland
+PPP1R9A,protein phosphatase 1 regulatory subunit 9A,Eccrine sweat gland
+PROM1,prominin 1,Eccrine sweat gland
+PRR15L,proline rich 15 like,Eccrine sweat gland
+PYGB,"phosphorylase, glycogen, brain",Eccrine sweat gland
+RARB,retinoic acid receptor beta,Eccrine sweat gland
+RHPN2,rhophilin,Eccrine sweat gland, Rho GTPase binding protein 2
+ROPN1,rhophilin associated tail protein 1,Eccrine sweat gland
+SFRP1,secreted frizzled-related protein 1,Eccrine sweat gland
+SH3BP4,SH3-domain binding protein 4,Eccrine sweat gland
+SHANK2,SH3 and multiple ankyrin repeat domains 2,Eccrine sweat gland
+SHC4,SHC (Src homology 2 domain containing) family member 4,Eccrine sweat gland
+SHROOM3,shroom family member 3,Eccrine sweat gland
+SLC12A2,solute carrier family 12 member 2,Eccrine sweat gland
+SLC12A7,solute carrier family 12 member 7,Eccrine sweat gland
+SLC13A2,solute carrier family 13 member 2,Eccrine sweat gland
+SLC14A1,solute carrier family 14 member 1 (Kidd blood group),Eccrine sweat gland
+SLC26A2,solute carrier family 26 member 2,Eccrine sweat gland
+SLC4A11,solute carrier family 4 member 11,Eccrine sweat gland
+SORL1,sortilin-related receptor,Eccrine sweat gland, L(DLR class) A repeats containing
+SOX10,SRY-box 10,Eccrine sweat gland
+SOX8,SRY-box 8,Eccrine sweat gland
+SOX9,SRY-box 9,Eccrine sweat gland
+SOX9-AS1,SOX9 antisense RNA 1,Eccrine sweat gland
+SPDEF,SAM pointed domain containing ETS transcription factor,Eccrine sweat gland
+STAC2,SH3 and cysteine rich domain 2,Eccrine sweat gland
+STK32A,serine/threonine kinase 32A,Eccrine sweat gland
+STK39,serine/threonine kinase 39,Eccrine sweat gland
+TBX3,T-box 3,Eccrine sweat gland
+TESC,tescalcin,Eccrine sweat gland
+TFCP2L1,transcription factor CP2-like 1,Eccrine sweat gland
+TMEM213,transmembrane protein 213,Eccrine sweat gland
+TMPRSS2,transmembrane protease,Eccrine sweat gland, serine 2
+TPD52L1,tumor protein D52-like 1,Eccrine sweat gland
+VTCN1,V-set domain containing T cell activation inhibitor 1,Eccrine sweat gland
+WDR72,WD repeat domain 72,Eccrine sweat gland
+ABCC11,ATP binding cassette subfamily C member 11,Apocrine gland
+ABCC12,ATP binding cassette subfamily C member 12,Apocrine gland
+ACSM1,acyl-CoA synthetase medium-chain family member 1,Apocrine gland
+AKR1D1,aldo-keto reductase family 1,Apocrine gland, member D1
+B3GAT1,beta-1,Apocrine gland,3-glucuronyltransferase 1
+C6orf223,chromosome 6 open reading frame 223,Apocrine gland
+CAPN13,calpain 13,Apocrine gland
+CES1P1,carboxylesterase 1 pseudogene 1,Apocrine gland
+CHST1,carbohydrate sulfotransferase 1,Apocrine gland
+CXCL17,C-X-C motif chemokine ligand 17,Apocrine gland
+DHRS2,dehydrogenase/reductase (SDR family) member 2,Apocrine gland
+FCN2,ficolin 2,Apocrine gland
+FIBCD1,fibrinogen C domain containing 1,Apocrine gland
+GNMT,glycine N-methyltransferase,Apocrine gland
+GSTM5,glutathione S-transferase mu 5,Apocrine gland
+GUSB,glucuronidase beta,Apocrine gland
+HPN,hepsin,Apocrine gland
+KMO,kynurenine 3-monooxygenase (kynurenine 3-hydroxylase),Apocrine gland
+KYNU,kynureninase,Apocrine gland
+LBP,lipopolysaccharide binding protein,Apocrine gland
+LINC01511,long intergenic non-protein coding RNA 1511,Apocrine gland
+NAT2,N-acetyltransferase 2 (arylamine N-acetyltransferase),Apocrine gland
+NLRP13,NLR family,Apocrine gland, pyrin domain containing 13
+ST8SIA6-AS1,ST8SIA6 antisense RNA 1,Apocrine gland
+UGT2B11,UDP glucuronosyltransferase family 2 member B11,Apocrine gland
+ACER1,alkaline ceramidase 1,Keratinocyte differentiation
+ALOXE3,arachidonate lipoxygenase 3,Keratinocyte differentiation
+ANXA9,annexin A9,Keratinocyte differentiation
+AQP9,aquaporin 9,Keratinocyte differentiation
+ARG1,arginase 1,Keratinocyte differentiation
+ASPRV1,aspartic peptidase,Keratinocyte differentiation, retroviral-like 1
+BPIFC,BPI fold containing family C,Keratinocyte differentiation
+BSPRY,B-box and SPRY domain containing,Keratinocyte differentiation
+BTC,betacellulin,Keratinocyte differentiation
+C1orf68,chromosome 1 open reading frame 68,Keratinocyte differentiation
+CALML5,calmodulin like 5,Keratinocyte differentiation
+CDC34,cell division cycle 34,Keratinocyte differentiation
+CLIC3,chloride intracellular channel 3,Keratinocyte differentiation
+CNFN,cornifelin,Keratinocyte differentiation
+CRCT1,cysteine rich C-terminal 1,Keratinocyte differentiation
+CSNK2A2,casein kinase 2 alpha 2,Keratinocyte differentiation
+CYP4F22,cytochrome P450 family 4 subfamily F member 22,Keratinocyte differentiation
+CYSRT1,cysteine rich tail 1,Keratinocyte differentiation
+DEGS2,delta(4)-desaturase,Keratinocyte differentiation, sphingolipid 2
+DMKN,dermokine,Keratinocyte differentiation
+ELMOD1,ELMO domain containing 1,Keratinocyte differentiation
+ELOVL7,ELOVL fatty acid elongase 7,Keratinocyte differentiation
+EPHX3,epoxide hydrolase 3,Keratinocyte differentiation
+ESYT3,extended synaptotagmin protein 3,Keratinocyte differentiation
+FAM110A,family with sequence similarity 110 member A,Keratinocyte differentiation
+FLG2,filaggrin family member 2,Keratinocyte differentiation
+GJB5,gap junction protein beta 5,Keratinocyte differentiation
+GLTP,glycolipid transfer protein,Keratinocyte differentiation
+IL22RA1,interleukin 22 receptor subunit alpha 1,Keratinocyte differentiation
+IL37,interleukin 37,Keratinocyte differentiation
+KCTD4,potassium channel tetramerization domain containing 4,Keratinocyte differentiation
+KLHL18,kelch like family member 18,Keratinocyte differentiation
+KLK5,kallikrein related peptidase 5,Keratinocyte differentiation
+KLK7,kallikrein related peptidase 7,Keratinocyte differentiation
+KRT23,keratin 23,Keratinocyte differentiation
+KRT78,keratin 78,Keratinocyte differentiation
+KRT80,keratin 80,Keratinocyte differentiation
+KRTDAP,keratinocyte differentiation associated protein,Keratinocyte differentiation
+LCE1B,late cornified envelope 1B,Keratinocyte differentiation
+LCE2B,late cornified envelope 2B,Keratinocyte differentiation
+LINC00302,long intergenic non-protein coding RNA 302,Keratinocyte differentiation
+LOR,loricrin,Keratinocyte differentiation
+LY6G6C,lymphocyte antigen 6 complex,Keratinocyte differentiation, locus G6C
+LYNX1,Ly6/neurotoxin 1,Keratinocyte differentiation
+LYPD5,LY6/PLAUR domain containing 5,Keratinocyte differentiation
+MAP1LC3A,microtubule associated protein 1 light chain 3 alpha,Keratinocyte differentiation
+MAP3K9,mitogen-activated protein kinase kinase kinase 9,Keratinocyte differentiation
+MARCH3,membrane associated ring-CH-type finger 3,Keratinocyte differentiation
+MFSD5,major facilitator superfamily domain containing 5,Keratinocyte differentiation
+MPZL3,myelin protein zero like 3,Keratinocyte differentiation
+NFE2,nuclear factor,Keratinocyte differentiation, erythroid 2
+NLRP10,NLR family,Keratinocyte differentiation, pyrin domain containing 10
+PCSK6,proprotein convertase subtilisin/kexin type 6,Keratinocyte differentiation
+PDLIM2,PDZ and LIM domain 2,Keratinocyte differentiation
+PLCXD1,phosphatidylinositol specific phospholipase C X domain containing 1,Keratinocyte differentiation
+PRDM1,PR domain 1,Keratinocyte differentiation
+PRSS8,protease,Keratinocyte differentiation, serine 8
+PTGER3,prostaglandin E receptor 3,Keratinocyte differentiation
+RAB11FIP1,RAB11 family interacting protein 1 (class I),Keratinocyte differentiation
+SBSN,suprabasin,Keratinocyte differentiation
+SDR9C7,short chain dehydrogenase/reductase family 9C,Keratinocyte differentiation, member 7
+SERPINA12,serpin family A member 12,Keratinocyte differentiation
+SLC46A2,solute carrier family 46 member 2,Keratinocyte differentiation
+SLURP1,secreted LY6/PLAUR domain containing 1,Keratinocyte differentiation
+SPAG1,sperm associated antigen 1,Keratinocyte differentiation
+SRPK1,SRSF protein kinase 1,Keratinocyte differentiation
+STK10,serine/threonine kinase 10,Keratinocyte differentiation
+SULT2B1,sulfotransferase family 2B member 1,Keratinocyte differentiation
+TACSTD2,tumor-associated calcium signal transducer 2,Keratinocyte differentiation
+TGM1,transglutaminase 1,Keratinocyte differentiation
+TMEM125,transmembrane protein 125,Keratinocyte differentiation
+TMEM86A,transmembrane protein 86A,Keratinocyte differentiation
+TMPRSS13,transmembrane protease,Keratinocyte differentiation, serine 13
+TPRG1,tumor protein p63 regulated 1,Keratinocyte differentiation
+UBASH3B,ubiquitin associated and SH3 domain containing B,Keratinocyte differentiation
+USP32,ubiquitin specific peptidase 32,Keratinocyte differentiation
+WFDC5,WAP four-disulfide core domain 5,Keratinocyte differentiation
+XKRX,XK related,Keratinocyte differentiation, X-linked
+DEFB4A,defensin beta 4A,Keratinocyte (subset)
+PI3,peptidase inhibitor 3,Keratinocyte (subset)
+S100A7,S100 calcium binding protein A7,Keratinocyte (subset)
+S100A7A,S100 calcium binding protein A7A,Keratinocyte (subset)
+S100A8,S100 calcium binding protein A8,Keratinocyte (subset)
+S100A9,S100 calcium binding protein A9,Keratinocyte (subset)
+SPRR2A,small proline rich protein 2A,Keratinocyte (subset)
+CA14,carbonic anhydrase 14,Melanocyte
+DCT,dopachrome tautomerase,Melanocyte
+GPR143,G protein-coupled receptor 143,Melanocyte
+MLANA,melan-A,Melanocyte
+PMEL,premelanosome protein,Melanocyte
+TYR,tyrosinase,Melanocyte
+TYRP1,tyrosinase-related protein 1,Melanocyte
+ADAMTS2,ADAM metallopeptidase with thrombospondin type 1 motif 2,Fibroblast
+ADAMTSL1,ADAMTS like 1,Fibroblast
+AEBP1,AE binding protein 1,Fibroblast
+ALDH1L2,aldehyde dehydrogenase 1 family member L2,Fibroblast
+ANGPTL1,angiopoietin like 1,Fibroblast
+ANGPTL2,angiopoietin like 2,Fibroblast
+ANK2,ankyrin 2,Fibroblast, neuronal
+ANXA5,annexin A5,Fibroblast
+ARF4,ADP ribosylation factor 4,Fibroblast
+BST1,bone marrow stromal cell antigen 1,Fibroblast
+C1QTNF2,C1q and tumor necrosis factor related protein 2,Fibroblast
+C1QTNF6,C1q and tumor necrosis factor related protein 6,Fibroblast
+C1S,complement component 1,Fibroblast, s subcomponent
+CALU,calumenin,Fibroblast
+CCDC80,coiled-coil domain containing 80,Fibroblast
+CD276,CD276 molecule,Fibroblast
+CD99,CD99 molecule,Fibroblast
+CERCAM,cerebral endothelial cell adhesion molecule,Fibroblast
+CFD,complement factor D (adipsin),Fibroblast
+CFH,complement factor H,Fibroblast
+CHRDL1,chordin-like 1,Fibroblast
+CMTM3,CKLF like MARVEL transmembrane domain containing 3,Fibroblast
+COL12A1,collagen type XII alpha 1,Fibroblast
+COL14A1,collagen type XIV alpha 1,Fibroblast
+COL1A1,collagen type I alpha 1,Fibroblast
+COL1A2,collagen type I alpha 2,Fibroblast
+COL3A1,collagen type III alpha 1,Fibroblast
+COL5A1,collagen type V alpha 1,Fibroblast
+COL5A2,collagen type V alpha 2,Fibroblast
+COL6A1,collagen type VI alpha 1,Fibroblast
+COL6A2,collagen type VI alpha 2,Fibroblast
+COL6A3,collagen type VI alpha 3,Fibroblast
+COL8A2,collagen type VIII alpha 2,Fibroblast
+COPZ2,coatomer protein complex subunit zeta 2,Fibroblast
+CPQ,carboxypeptidase Q,Fibroblast
+CPZ,carboxypeptidase Z,Fibroblast
+CREB3L1,cAMP responsive element binding protein 3-like 1,Fibroblast
+CTHRC1,collagen triple helix repeat containing 1,Fibroblast
+CTSK,cathepsin K,Fibroblast
+DCN,decorin,Fibroblast
+DFNA5,DFNA5,Fibroblast, deafness associated tumor suppressor
+DPP4,dipeptidyl peptidase 4,Fibroblast
+DPT,dermatopontin,Fibroblast
+EFEMP2,EGF containing fibulin-like extracellular matrix protein 2,Fibroblast
+ELN,elastin,Fibroblast
+EMILIN1,elastin microfibril interfacer 1,Fibroblast
+EMILIN2,elastin microfibril interfacer 2,Fibroblast
+EMP3,epithelial membrane protein 3,Fibroblast
+EPB41L3,erythrocyte membrane protein band 4.1 like 3,Fibroblast
+FAM109B,family with sequence similarity 109 member B,Fibroblast
+FAM198A,family with sequence similarity 198 member A,Fibroblast
+FBLN1,fibulin 1,Fibroblast
+FBLN2,fibulin 2,Fibroblast
+FBN1,fibrillin 1,Fibroblast
+FEZ1,fasciculation and elongation protein zeta 1,Fibroblast
+FKBP7,FK506 binding protein 7,Fibroblast
+FN1,fibronectin 1,Fibroblast
+FSTL1,follistatin like 1,Fibroblast
+FUCA2,fucosidase,Fibroblast, alpha-L- 2, plasma
+GALNT16,polypeptide N-acetylgalactosaminyltransferase 16,Fibroblast
+GLIPR2,GLI pathogenesis related 2,Fibroblast
+GPX8,glutathione peroxidase 8 (putative),Fibroblast
+GSN,gelsolin,Fibroblast
+HTRA1,HtrA serine peptidase 1,Fibroblast
+IGDCC4,immunoglobulin superfamily,Fibroblast, DCC subclass, member 4
+IL17D,interleukin 17D,Fibroblast
+ISLR,immunoglobulin superfamily containing leucine-rich repeat,Fibroblast
+ITGA11,integrin subunit alpha 11,Fibroblast
+ITIH5,inter-alpha-trypsin inhibitor heavy chain family member 5,Fibroblast
+KAZALD1,Kazal type serine peptidase inhibitor domain 1,Fibroblast
+KDELR3,KDEL endoplasmic reticulum protein retention receptor 3,Fibroblast
+LIPC,lipase C,Fibroblast, hepatic type
+LOX,lysyl oxidase,Fibroblast
+LOXL1,lysyl oxidase like 1,Fibroblast
+LRP1,LDL receptor related protein 1,Fibroblast
+LTBP1,latent transforming growth factor beta binding protein 1,Fibroblast
+LUM,lumican,Fibroblast
+MAGED1,MAGE family member D1,Fibroblast
+MAGEH1,MAGE family member H1,Fibroblast
+MARVELD1,MARVEL domain containing 1,Fibroblast
+MASP1,mannan binding lectin serine peptidase 1,Fibroblast
+MFAP4,microfibrillar associated protein 4,Fibroblast
+MFAP5,microfibrillar associated protein 5,Fibroblast
+MGP,matrix Gla protein,Fibroblast
+MMP2,matrix metallopeptidase 2,Fibroblast
+MMP27,matrix metallopeptidase 27,Fibroblast
+MRC2,mannose receptor C type 2,Fibroblast
+NAP1L3,nucleosome assembly protein 1 like 3,Fibroblast
+OAF,out at first homolog,Fibroblast
+OLFML1,olfactomedin like 1,Fibroblast
+OLFML2B,olfactomedin like 2B,Fibroblast
+OMD,osteomodulin,Fibroblast
+P3H1,prolyl 3-hydroxylase 1,Fibroblast
+P3H3,prolyl 3-hydroxylase 3,Fibroblast
+PAM,peptidylglycine alpha-amidating monooxygenase,Fibroblast
+PCOLCE,procollagen C-endopeptidase enhancer,Fibroblast
+PDGFD,platelet derived growth factor D,Fibroblast
+PDGFRA,platelet derived growth factor receptor alpha,Fibroblast
+PDGFRB,platelet derived growth factor receptor beta,Fibroblast
+PDGFRL,platelet derived growth factor receptor like,Fibroblast
+PDIA5,protein disulfide isomerase family A member 5,Fibroblast
+PI16,peptidase inhibitor 16,Fibroblast
+PIEZO2,piezo type mechanosensitive ion channel component 2,Fibroblast
+PLAC9,placenta specific 9,Fibroblast
+PLPP3,phospholipid phosphatase 3,Fibroblast
+PMP22,peripheral myelin protein 22,Fibroblast
+PODN,podocan,Fibroblast
+PPIC,peptidylprolyl isomerase C,Fibroblast
+PRRG3,proline rich Gla (G-carboxyglutamic acid) 3 (transmembrane),Fibroblast
+PTGFR,prostaglandin F receptor,Fibroblast
+RASSF2,Ras association domain family member 2,Fibroblast
+RCN3,reticulocalbin 3,Fibroblast
+RECK,reversion inducing cysteine rich protein with kazal motifs,Fibroblast
+S100A4,S100 calcium binding protein A4,Fibroblast
+S100A6,S100 calcium binding protein A6,Fibroblast
+SCARA5,scavenger receptor class A member 5,Fibroblast
+SERPINF1,sserpin family F member 1,Fibroblast
+SFRP2,secreted frizzled-related protein 2,Fibroblast
+SLC2A10,solute carrier family 2 member 10,Fibroblast
+SLIT3,slit guidance ligand 3,Fibroblast
+SPARC,secreted protein acidic and cysteine rich,Fibroblast
+SSC5D,scavenger receptor cysteine rich family,Fibroblast, 5 domains
+SVEP1,sushi,Fibroblast, von Willebrand factor type A, EGF and pentraxin domain containing 1
+THY1,Thy-1 cell surface antigen,Fibroblast
+TIMP2,TIMP metallopeptidase inhibitor 2,Fibroblast
+TMEM119,transmembrane protein 119,Fibroblast
+TPST1,tyrosylprotein sulfotransferase 1,Fibroblast
+VCAN,versican,Fibroblast
+VGLL3,vestigial like family member 3,Fibroblast
+WISP2,WNT1 inducible signaling pathway protein 2,Fibroblast
+XPNPEP2,X-prolyl aminopeptidase (aminopeptidase P) 2,Fibroblast, membrane-bound
+ZNF469,zinc finger protein 469,Fibroblast
+A2M-AS1,A2M antisense RNA 1 (head to head),Endothelium
+ADGRF5,adhesion G protein-coupled receptor F5,Endothelium
+ADGRL4,adhesion G protein-coupled receptor L4,Endothelium
+ARAP3,ArfGAP with RhoGAP domain,Endothelium, ankyrin repeat and PH domain 3
+C10orf128,chromosome 10 open reading frame 128,Endothelium
+CCM2L,CCM2 like scaffolding protein,Endothelium
+CD93,CD93 molecule,Endothelium
+CHN1,chimerin 1,Endothelium
+CYYR1,cysteine/tyrosine-rich 1,Endothelium
+EBF1,early B-cell factor 1,Endothelium
+EBF3,early B-cell factor 3,Endothelium
+ECSCR,endothelial cell surface expressed chemotaxis and apoptosis regulator,Endothelium
+EPS8,epidermal growth factor receptor pathway substrate 8,Endothelium
+ERG,v-ets avian erythroblastosis virus E26 oncogene homolog,Endothelium
+FAM162B,family with sequence similarity 162 member B,Endothelium
+FLI1,Fli-1 proto-oncogene,Endothelium, ETS transcription factor
+GIMAP1,GTPase,Endothelium, IMAP family member 1
+GIMAP4,GTPase,Endothelium, IMAP family member 4
+GIMAP6,GTPase,Endothelium, IMAP family member 6
+GNG11,G protein subunit gamma 11,Endothelium
+GUCY1B3,guanylate cyclase 1,Endothelium, soluble, beta 3
+ICAM2,intercellular adhesion molecule 2,Endothelium
+JAM2,junctional adhesion molecule 2,Endothelium
+LIN7A,lin-7 homolog A,Endothelium, crumbs cell polarity complex component
+MECOM,MDS1 and EVI1 complex locus,Endothelium
+MEF2C,myocyte enhancer factor 2C,Endothelium
+MEOX2,mesenchyme homeobox 2,Endothelium
+NR2F2,nuclear receptor subfamily 2 group F member 2,Endothelium
+PLVAP,plasmalemma vesicle associated protein,Endothelium
+PTPRB,protein tyrosine phosphatase,Endothelium, receptor type B
+RASIP1,Ras interacting protein 1,Endothelium
+ROBO4,roundabout guidance receptor 4,Endothelium
+SHANK3,SH3 and multiple ankyrin repeat domains 3,Endothelium
+SHE,Src homology 2 domain containing E,Endothelium
+SPARCL1,SPARC like 1,Endothelium
+TAL1,T-cell acute lymphocytic leukemia 1,Endothelium
+TEK,TEK receptor tyrosine kinase,Endothelium
+TIE1,tyrosine kinase with immunoglobulin like and EGF like domains 1,Endothelium
+TSPAN7,tetraspanin 7,Endothelium
+VWF,von Willebrand factor,Endothelium
+ACTA2,actin,Smooth muscle, alpha 2, smooth muscle, aorta
+ACTG2,actin,Smooth muscle, gamma 2, smooth muscle, enteric
+ALDH1A2,aldehyde dehydrogenase 1 family member A2,Smooth muscle
+ALDH1B1,aldehyde dehydrogenase 1 family member B1,Smooth muscle
+ASB2,ankyrin repeat and SOCS box containing 2,Smooth muscle
+CARMN,cardiac mesoderm enhancer-associated non-coding RNA,Smooth muscle
+CASQ2,calsequestrin 2,Smooth muscle
+CFL2,cofilin 2,Smooth muscle
+CNN1,calponin 1,Smooth muscle
+CSRP1,cysteine and glycine rich protein 1,Smooth muscle
+DACT3,dishevelled-binding antagonist of beta-catenin 3,Smooth muscle
+DES,desmin,Smooth muscle
+DTNA,dystrobrevin alpha,Smooth muscle
+FILIP1,filamin A interacting protein 1,Smooth muscle
+FLNC,filamin C,Smooth muscle
+HSD17B6,hydroxysteroid (17-beta) dehydrogenase 6,Smooth muscle
+ITGA8,integrin subunit alpha 8,Smooth muscle
+JPH2,junctophilin 2,Smooth muscle
+KCNMA1,potassium calcium-activated channel subfamily M alpha 1,Smooth muscle
+KCNMB1,potassium calcium-activated channel subfamily M regulatory beta subunit 1,Smooth muscle
+LMOD1,leiomodin 1,Smooth muscle
+MBNL1-AS1,MBNL1 antisense RNA 1,Smooth muscle
+MRVI1,murine retrovirus integration site 1 homolog,Smooth muscle
+MSRB3,methionine sulfoxide reductase B3,Smooth muscle
+MYH11,myosin,Smooth muscle, heavy chain 11, smooth muscle
+MYL9,myosin light chain 9,Smooth muscle
+MYLK,myosin light chain kinase,Smooth muscle
+MYOCD,myocardin,Smooth muscle
+P2RX1,purinergic receptor P2X 1,Smooth muscle
+PCP4,Purkinje cell protein 4,Smooth muscle
+PDLIM3,PDZ and LIM domain 3,Smooth muscle
+PGM5,phosphoglucomutase 5,Smooth muscle
+PLN,phospholamban,Smooth muscle
+PPP1R14A,protein phosphatase 1 regulatory inhibitor subunit 14A,Smooth muscle
+PRKG1,protein kinase,Smooth muscle, cGMP-dependent, type I
+PRUNE2,prune homolog 2 (Drosophila),Smooth muscle
+RAB9B,RAB9B,Smooth muscle, member RAS oncogene family
+RASL12,RAS like family 12,Smooth muscle
+RBPMS2,RNA binding protein with multiple splicing 2,Smooth muscle
+SCUBE3,signal peptide,Smooth muscle, CUB domain and EGF like domain containing 3
+SORBS2,sorbin and SH3 domain containing 2,Smooth muscle
+SYNM,synemin,Smooth muscle
+SYNPO2,synaptopodin 2,Smooth muscle
+TAGLN,transgelin,Smooth muscle
+TMOD1,tropomodulin 1,Smooth muscle
+TPM1,tropomyosin 1 (alpha),Smooth muscle
+TPM2,tropomyosin 2 (beta),Smooth muscle
+WFDC1,WAP four-disulfide core domain 1,Smooth muscle
+WIPF3,WAS/WASL interacting protein family member 3,Smooth muscle
+ACTA1,actin,Skeletal muscle, alpha 1, skeletal muscle
+ACTN2,actinin alpha 2,Skeletal muscle
+ACTN3,actinin alpha 3 (gene/pseudogene),Skeletal muscle
+AMPD1,adenosine monophosphate deaminase 1,Skeletal muscle
+APOBEC2,apolipoprotein B mRNA editing enzyme catalytic subunit 2,Skeletal muscle
+ASB5,ankyrin repeat and SOCS box containing 5,Skeletal muscle
+ATP2A1,ATPase sarcoplasmic/endoplasmic reticulum Ca2+ transporting 1,Skeletal muscle
+ATP2A1-AS1,ATP2A1 antisense RNA 1,Skeletal muscle
+C10orf71,chromosome 10 open reading frame 71,Skeletal muscle
+CA3,carbonic anhydrase 3,Skeletal muscle
+CACNA1S,calcium voltage-gated channel subunit alpha1 S,Skeletal muscle
+CACNG1,calcium voltage-gated channel auxiliary subunit gamma 1,Skeletal muscle
+CASQ1,calsequestrin 1,Skeletal muscle
+CKM,creatine kinase,Skeletal muscle, M-type
+COX6A2,cytochrome c oxidase subunit 6A2,Skeletal muscle
+CSRP3,cysteine and glycine rich protein 3,Skeletal muscle
+DHRS7C,dehydrogenase/reductase (SDR family) member 7C,Skeletal muscle
+DUSP26,dual specificity phosphatase 26 (putative),Skeletal muscle
+ENO3,enolase 3 (beta muscle),Skeletal muscle
+FBP2,fructose-bisphosphatase 2,Skeletal muscle
+HFE2,hemochromatosis type 2 (juvenile),Skeletal muscle
+IDI2,isopentenyl-diphosphate delta isomerase 2,Skeletal muscle
+JSRP1,junctional sarcoplasmic reticulum protein 1,Skeletal muscle
+KLHL40,kelch like family member 40,Skeletal muscle
+KLHL41,kelch like family member 41,Skeletal muscle
+LMOD2,leiomodin 2,Skeletal muscle
+LMOD3,leiomodin 3,Skeletal muscle
+MB,myoglobin,Skeletal muscle
+MIR1-1HG,MIR1-1 host gene,Skeletal muscle
+MYBPC1,myosin binding protein C,Skeletal muscle, slow type
+MYBPC2,myosin binding protein C,Skeletal muscle, fast type
+MYH1,myosin,Skeletal muscle, heavy chain 1, skeletal muscle, adult
+MYH2,myosin,Skeletal muscle, heavy chain 2, skeletal muscle, adult
+MYH7,myosin,Skeletal muscle, heavy chain 7, cardiac muscle, beta
+MYL1,myosin light chain 1,Skeletal muscle
+MYL2,myosin light chain 2,Skeletal muscle
+MYL3,myosin light chain 3,Skeletal muscle
+MYLK2,myosin light chain kinase 2,Skeletal muscle
+MYLPF,myosin light chainSkeletal muscle,Skeletal muscle, phosphorylatable, fast skeletal muscle
+MYOT,myotilin,Skeletal muscle
+MYOZ1,myozenin 1,Skeletal muscle
+MYOZ2,myozenin 2,Skeletal muscle
+NEB,nebulin,Skeletal muscle
+NMRK2,nicotinamide riboside kinase 2,Skeletal muscle
+NRAP,nebulin related anchoring protein,Skeletal muscle
+PPP1R3A,protein phosphatase 1 regulatory subunit 3A,Skeletal muscle
+PYGM,phosphorylase,Skeletal muscle, glycogen, muscle
+RPL3L,ribosomal protein L3 like,Skeletal muscle
+SLN,sarcolipin,Skeletal muscle
+SMCO1,single-pass membrane protein with coiled-coil domains 1,Skeletal muscle
+SMPX,small muscle protein,Skeletal muscle, X-linked
+SMYD1,SET and MYND domain containing 1,Skeletal muscle
+STAC3,SH3 and cysteine rich domain 3,Skeletal muscle
+SYNPO2L,synaptopodin 2 like,Skeletal muscle
+TCAP,titin-cap,Skeletal muscle
+TMOD4,tropomodulin 4,Skeletal muscle
+TNNC2,troponin C2,Skeletal muscle, fast skeletal type
+TNNI1,troponin I1,Skeletal muscle, slow skeletal type
+TRDN,triadin,Skeletal muscle
+TRIM54,tripartite motif containing 54,Skeletal muscle
+TTN,titin,Skeletal muscle
+TTN-AS1,TTN antisense RNA 1,Skeletal muscle
+UNC45B,unc-45 myosin chaperone B,Skeletal muscle
+XIRP2,xin actin binding repeat containing 2,Skeletal muscle
+ACVR1C,activin A receptor type 1C,Adipocyte
+ADIPOQ,adiponectin,Adipocyte, C1Q and collagen domain containing
+AGPAT2,1-acylglycerol-3-phosphate O-acyltransferase 2,Adipocyte
+AIFM2,apoptosis inducing factor,Adipocyte, mitochondria associated 2
+CDO1,cysteine dioxygenase type 1,Adipocyte
+CIDEC,cell death inducing DFFA like effector c,Adipocyte
+FZD4,frizzled class receptor 4,Adipocyte
+GPAM,glycerol-3-phosphate acyltransferase,Adipocyte, mitochondrial
+GPD1,glycerol-3-phosphate dehydrogenase 1,Adipocyte
+GYG2,glycogenin 2,Adipocyte
+HEPACAM,hepatic and glial cell adhesion molecule,Adipocyte
+HRASLS5,HRAS like suppressor family member 5,Adipocyte
+LGALS12,lectin,Adipocyte, galactoside binding soluble 12
+LIPE,lipase E,Adipocyte, hormone sensitive type
+LPL,lipoprotein lipase,Adipocyte
+MARC1,mitochondrial amidoxime reducing component 1,Adipocyte
+MRAP,melanocortin 2 receptor accessory protein,Adipocyte
+NAT8L,N-acetyltransferase 8 like,Adipocyte
+PCK1,phosphoenolpyruvate carboxykinase 1,Adipocyte
+PDE3B,phosphodiesterase 3B,Adipocyte
+PLA2G16,phospholipase A2 group XVI,Adipocyte
+PLIN1,perilipin 1,Adipocyte
+PLIN4,perilipin 4,Adipocyte
+PPP1R1A,protein phosphatase 1 regulatory inhibitor subunit 1A,Adipocyte
+PRKAR2B,protein kinase cAMP-dependent type II regulatory subunit beta,Adipocyte
+RBP4,retinol binding protein 4,Adipocyte
+SCD,stearoyl-CoA desaturase (delta-9-desaturase),Adipocyte
+SLC19A3,solute carrier family 19 member 3,Adipocyte
+TIMP4,TIMP metallopeptidase inhibitor 4,Adipocyte
+TUSC5,tumor suppressor candidate 5,Adipocyte
+AIF1,allograft inflammatory factor 1,Macrophage / DC
+ALOX5AP,arachidonate 5-lipoxygenase activating protein,Macrophage / DC
+ARRB2,arrestin beta 2,Macrophage / DC
+BCAT1,branched chain amino acid transaminase 1,Macrophage / DC
+C1QA,complement component 1,Macrophage / DC, q subcomponent, A chain
+C1QB,complement component 1,Macrophage / DC, q subcomponent, B chain
+C1QC,complement component 1,Macrophage / DC, q subcomponent, C chain
+C3AR1,complement component 3a receptor 1,Macrophage / DC
+CD14,CD14 molecule,Macrophage / DC
+CD163,CD163 molecule,Macrophage / DC
+CD209,CD209 molecule,Macrophage / DC
+CD53,CD53 molecule,Macrophage / DC
+CD84,CD84 molecule,Macrophage / DC
+CSF1R,colony stimulating factor 1 receptor,Macrophage / DC
+CTSS,cathepsin S,Macrophage / DC
+CYBB,cytochrome b-245,Macrophage / DC, beta polypeptide
+CYTH4,cytohesin 4,Macrophage / DC
+DOCK2,dedicator of cytokinesis 2,Macrophage / DC
+DOK2,docking protein 2,Macrophage / DC
+F13A1,coagulation factor XIII A chain,Macrophage / DC
+FCER1G,Fc fragment of IgE receptor Ig,Macrophage / DC
+FCGR2A,Fc fragment of IgG receptor IIa,Macrophage / DC
+FCGR2B,Fc fragment of IgG receptor IIb,Macrophage / DC
+FOLR2,folate receptor 2 (fetal),Macrophage / DC
+GPR34,G protein-coupled receptor 34,Macrophage / DC
+HAVCR2,hepatitis A virus cellular receptor 2,Macrophage / DC
+HCK,HCK proto-oncogene,Macrophage / DC, Src family tyrosine kinase
+IL10RA,interleukin 10 receptor subunit alpha,Macrophage / DC
+ITGAM,integrin subunit alpha M,Macrophage / DC
+ITGB2,integrin subunit beta 2,Macrophage / DC
+LAIR1,leukocyte associated immunoglobulin like receptor 1,Macrophage / DC
+LAPTM5,lysosomal protein transmembrane 5,Macrophage / DC
+LCP2,lymphocyte cytosolic protein 2,Macrophage / DC
+LILRB4,leukocyte immunoglobulin like receptor B4,Macrophage / DC
+LILRB5,leukocyte immunoglobulin like receptor B5,Macrophage / DC
+MARCO,macrophage receptor with collagenous structure,Macrophage / DC
+MS4A14,membrane spanning 4-domains A14,Macrophage / DC
+MS4A4A,membrane spanning 4-domains A4A,Macrophage / DC
+MS4A6A,membrane spanning 4-domains A6A,Macrophage / DC
+MS4A7,membrane spanning 4-domains A7,Macrophage / DC
+MSR1,macrophage scavenger receptor 1,Macrophage / DC
+NCF4,neutrophil cytosolic factor 4,Macrophage / DC
+RNASE1,ribonuclease A family member 1,Macrophage / DC, pancreatic
+SIGLEC1,sialic acid binding Ig like lectin 1,Macrophage / DC
+SLCO2B1,solute carrier organic anion transporter family member 2B1,Macrophage / DC
+THEMIS2,thymocyte selection associated family member 2,Macrophage / DC
+TLR8,toll like receptor 8,Macrophage / DC
+TYROBP,TYRO protein tyrosine kinase binding protein,Macrophage / DC
+VSIG4,V-set and immunoglobulin domain containing 4,Macrophage / DC
+CD2,CD2 molecule,T cell
+CD247,CD247 molecule,T cell
+CD3D,CD3d molecule,T cell
+CD3G,CD3g molecule,T cell
+CD48,CD48 molecule,T cell
+CD8A,CD8a molecule,T cell
+EOMES,eomesodermin,T cell
+FYB,FYN binding protein,T cell
+GZMA,granzyme A,T cell
+GZMK,granzyme K,T cell
+IL7R,interleukin 7 receptor,T cell
+LCK,LCK proto-oncogene,T cell, Src family tyrosine kinase
+PTPRC,protein tyrosine phosphatase,T cell, receptor type C
+SCML4,sex comb on midleg-like 4 (Drosophila),T cell
+SPOCK2,sparc/osteonectin,T cell, cwcv and kazal-like domains proteoglycan (testican) 2
+THEMIS,thymocyte selection associated,T cell
+TRAT1,T cell receptor associated transmembrane adaptor 1,T cell
+BTK,Bruton tyrosine kinase,Fc?R signalling
+GATA2,GATA binding protein 2,Fc?R signalling
+HDC,histidine decarboxylase,Fc?R signalling
+LAT2,linker for activation of T-cells family member 2,Fc?R signalling
+MS4A2,membrane spanning 4-domains A2,Fc?R signalling
+RGS13,regulator of G-protein signaling 13,Fc?R signalling
+SIGLEC17P,sialic acid binding Ig like lectin 17,Fc?R signalling, pseudogene
+IGHA1,immunoglobulin heavy constant alpha 1,Plasma cell
+IGHV3-23,immunoglobulin heavy variable 3-23,Plasma cell
+IGKV1-17,immunoglobulin kappa variable 1-17,Plasma cell
+IGKV4-1,immunoglobulin kappa variable 4-1,Plasma cell
+IGLC2,immunoglobulin lambda constant 2 (Kern-Oz- marker),Plasma cell
+JCHAIN,joining chain of multimeric IgA and IgM,Plasma cell
+MZB1,marginal zone B and B1 cell specific protein,Plasma cell
+CMPK2,cytidine/uridine monophosphate kinase 2,IFN
+CXCL10,C-X-C motif chemokine ligand 10,IFN
+CXCL11,C-X-C motif chemokine ligand 11,IFN
+CXCL9,C-X-C motif chemokine ligand 9,IFN
+DTX3L,deltex 3 like,IFN, E3 ubiquitin ligase
+EPSTI1,epithelial stromal interaction 1 (breast),IFN
+GBP1,guanylate binding protein 1,IFN
+HERC6,HECT and RLD domain containing E3 ubiquitin protein ligase family member 6,IFN
+IFI44,interferon induced protein 44,IFN
+IFI44L,interferon induced protein 44 like,IFN
+IFI6,interferon alpha inducible protein 6,IFN
+IFIT3,interferon induced protein with tetratricopeptide repeats 3,IFN
+ISG15,ISG15 ubiquitin-like modifier,IFN
+MX1,MX dynamin like GTPase 1,IFN
+OAS2,2'-5'-oligoadenylate synthetase 2,IFN
+OAS3,2'-5'-oligoadenylate synthetase 3,IFN
+ODF3B,outer dense fiber of sperm tails 3B,IFN
+PARP14,poly(ADP-ribose) polymerase family member 14,IFN
+PARP9,poly(ADP-ribose) polymerase family member 9,IFN
+RSAD2,radical S-adenosyl methionine domain containing 2,IFN
+STAT1,signal transducer and activator of transcription 1,IFN
+XAF1,XIAP associated factor 1,IFN
+ANLN,anillin actin binding protein,Cell cycle (S/M phase)
+ASPM,abnormal spindle microtubule assembly,Cell cycle (S/M phase)
+AURKA,aurora kinase A,Cell cycle (S/M phase)
+AURKB,aurora kinase B,Cell cycle (S/M phase)
+BUB1,BUB1 mitotic checkpoint serine/threonine kinase,Cell cycle (S/M phase)
+BUB1B,BUB1 mitotic checkpoint serine/threonine kinase B,Cell cycle (S/M phase)
+CASC5,cancer susceptibility candidate 5,Cell cycle (S/M phase)
+CCNA2,cyclin A2,Cell cycle (S/M phase)
+CCNB1,cyclin B1,Cell cycle (S/M phase)
+CCNB2,cyclin B2,Cell cycle (S/M phase)
+CDC20,cell division cycle 20,Cell cycle (S/M phase)
+CDCA3,cell division cycle associated 3,Cell cycle (S/M phase)
+CDCA5,cell division cycle associated 5,Cell cycle (S/M phase)
+CDCA8,cell division cycle associated 8,Cell cycle (S/M phase)
+CDK1,cyclin-dependent kinase 1,Cell cycle (S/M phase)
+CDKN3,cyclin-dependent kinase inhibitor 3,Cell cycle (S/M phase)
+CENPA,centromere protein A,Cell cycle (S/M phase)
+CENPE,centromere protein E,Cell cycle (S/M phase)
+CENPF,centromere protein F,Cell cycle (S/M phase)
+CENPK,centromere protein K,Cell cycle (S/M phase)
+CENPW,centromere protein W,Cell cycle (S/M phase)
+CEP55,centrosomal protein 55,Cell cycle (S/M phase)
+CKS2,CDC28 protein kinase regulatory subunit 2,Cell cycle (S/M phase)
+DEPDC1,DEP domain containing 1,Cell cycle (S/M phase)
+DLGAP5,discs large homolog associated protein 5,Cell cycle (S/M phase)
+DTL,denticleless E3 ubiquitin protein ligase homolog,Cell cycle (S/M phase)
+E2F7,E2F transcription factor 7,Cell cycle (S/M phase)
+ECT2,epithelial cell transforming 2,Cell cycle (S/M phase)
+GINS1,GINS complex subunit 1,Cell cycle (S/M phase)
+GINS2,GINS complex subunit 2,Cell cycle (S/M phase)
+HELLS,helicase,Cell cycle (S/M phase), lymphoid-specific
+HMMR,hyaluronan mediated motility receptor,Cell cycle (S/M phase)
+KIAA0101,KIAA0101,Cell cycle (S/M phase)
+KIF11,kinesin family member 11,Cell cycle (S/M phase)
+KIF14,kinesin family member 14,Cell cycle (S/M phase)
+KIF18B,kinesin family member 18B,Cell cycle (S/M phase)
+KIF20A,kinesin family member 20A,Cell cycle (S/M phase)
+KIF23,kinesin family member 23,Cell cycle (S/M phase)
+KIF2C,kinesin family member 2C,Cell cycle (S/M phase)
+KIF4A,kinesin family member 4A,Cell cycle (S/M phase)
+MCM2,minichromosome maintenance complex component 2,Cell cycle (S/M phase)
+MELK,maternal embryonic leucine zipper kinase,Cell cycle (S/M phase)
+MKI67,marker of proliferation Ki-67,Cell cycle (S/M phase)
+NCAPG,non-SMC condensin I complex subunit G,Cell cycle (S/M phase)
+NDC80,NDC80 kinetochore complex component,Cell cycle (S/M phase)
+NEK2,NIMA related kinase 2,Cell cycle (S/M phase)
+NUF2,NUF2,Cell cycle (S/M phase), NDC80 kinetochore complex component
+NUSAP1,nucleolar and spindle associated protein 1,Cell cycle (S/M phase)
+OIP5,Opa interacting protein 5,Cell cycle (S/M phase)
+PBK,PDZ binding kinase,Cell cycle (S/M phase)
+PCNA,proliferating cell nuclear antigen,Cell cycle (S/M phase)
+PRC1,protein regulator of cytokinesis 1,Cell cycle (S/M phase)
+PTTG1,pituitary tumor-transforming 1,Cell cycle (S/M phase)
+RACGAP1,Rac GTPase activating protein 1,Cell cycle (S/M phase)
+RAD51AP1,RAD51 associated protein 1,Cell cycle (S/M phase)
+RRM2,ribonucleotide reductase regulatory subunit M2,Cell cycle (S/M phase)
+SPAG5,sperm associated antigen 5,Cell cycle (S/M phase)
+TK1,thymidine kinase 1,Cell cycle (S/M phase)
+TOP2A,topoisomerase (DNA) II alpha,Cell cycle (S/M phase)
+TPX2,TPX2,Cell cycle (S/M phase), microtubule-associated
+TTK,TTK protein kinase,Cell cycle (S/M phase)
+TYMS,thymidylate synthetase,Cell cycle (S/M phase)
+UBE2C,ubiquitin conjugating enzyme E2 C,Cell cycle (S/M phase)
+ZNF367,zinc finger protein 367,Cell cycle (S/M phase)
+ZWINT,ZW10 interacting kinetochore protein,Cell cycle (S/M phase)
+CIART,circadian associated repressor of transcription,Circadian clock
+CRY2,cryptochrome circadian clock 2,Circadian clock
+DBP,D site of albumin promoter (albumin D-box) binding protein,Circadian clock
+NR1D1,nuclear receptor subfamily 1 group D member 1,Circadian clock
+NR1D2,nuclear receptor subfamily 1 group D member 2,Circadian clock
+PER1,period circadian clock 1,Circadian clock
+PER3,period circadian clock 3,Circadian clock
+TEF,thyrotrophic embryonic factor,Circadian clock
+DDX3Y,DEAD-box helicase 3,Y-chromosome, Y-linked
+EIF1AY,eukaryotic translation initiation factor 1A,Y-chromosome, Y-linked
+KDM5D,lysine demethylase 5D,Y-chromosome
+NLGN4Y,neuroligin 4,Y-chromosome, Y-linked
+PRKY,protein kinase,Y-chromosome, Y-linked, pseudogene
+RNASEH2CP1,ribonuclease H2 subunit C pseudogene 1,Y-chromosome
+RPS4Y1,ribosomal protein S4,Y-chromosome, Y-linked 1
+TTTY14,testis-specific transcript,Y-chromosome, Y-linked 14 (non-protein coding)
+TTTY15,testis-specific transcript,Y-chromosome, Y-linked 15 (non-protein coding)
+TXLNGY,taxilin gamma pseudogene,Y-chromosome, Y-linked
+USP9Y,ubiquitin specific peptidase 9,Y-chromosome, Y-linked
+UTY,ubiquitously transcribed tetratricopeptide repeat containing,Y-chromosome, Y-linked
+ZFY,zinc finger protein,Y-chromosome, Y-linked

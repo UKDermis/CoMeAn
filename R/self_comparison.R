@@ -1,4 +1,3 @@
-
 #' Generates new modules for an igraph object and then compares novel modules to the original modules
 #'
 #' @param file (Optional) String, name of the file to be loaded. Default is "AdL"

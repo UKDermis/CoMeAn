@@ -1,4 +1,3 @@
-
 #' Reads in two files and produces a .gml file based off the overlap method
 #'
 #' @param file1 (optional): String, name of the file to be loaded. Default is "AdL"

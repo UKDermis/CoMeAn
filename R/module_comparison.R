@@ -1,4 +1,3 @@
-
 #' Calculates the hamming distance between two igraph objects
 #'
 #' @param net1 (required): One of the two igraph objects beign compared

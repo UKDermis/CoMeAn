@@ -1,4 +1,3 @@
-
 #' net_comparison
 #' Compares two graphs based off datastructures found via unsupervised learning
 #'
