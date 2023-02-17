@@ -11,6 +11,23 @@
 #' The reason why we aren't including the WGCNA package as a dependency is because the package relies on a few libraries
 #' which aren't available for R >= 4.0.0 as of writing this code.
 
+#'  Copyright (C) 2008 Peter Langfelder; parts based on R by R Development team
+#'  This program is free software; you can redistribute it and/or
+#'  modify it under the terms of the GNU General Public License
+#'  as published by the Free Software Foundation; either version 2
+#'  of the License, or (at your option) any later version.
+#'  This program is distributed in the hope that it will be useful,
+#'  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#'  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#'  GNU General Public License for more details.
+#'  You should have received a copy of the GNU General Public License
+#'  along with this program; if not, write to the Free Software
+#'  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+
+dyn.load("src/corFunctions.so")
+
+print("load successful")
+
 corFast <- function(x, y = NULL, use = "all.obs", method = "pearson",
                weights.x = NULL, weights.y = NULL,
                quick = 0,
@@ -125,7 +142,7 @@ corFast <- function(x, y = NULL, use = "all.obs", method = "pearson",
          res <- .Call("cor1Fast_call", x, weights.x,
                    quick, cosine,
                    nNA, err, nThreads,
-                   verbose, indent, PACKAGE = "WGCNA")
+                   verbose, indent)
          if (!is.null(dimnames(x)[[2]])) dimnames(res) <- list(dimnames(x)[[2]],  dimnames(x)[[2]] )
       } else {
          y <- as.matrix(y)
@@ -134,7 +151,7 @@ corFast <- function(x, y = NULL, use = "all.obs", method = "pearson",
          if (prod(dim(y))==0) stop("'y' has a zero dimension.")
          if (nrow(x)!=nrow(y))
             stop("'x' and 'y' have incompatible dimensions (unequal numbers of rows).")
-         res <- .Call("corFast_call", x, y,
+         res <- .C("cor1Fast_call", x, y,
                  weights.x, weights.y,
                  quick,
                  cosineX,
@@ -170,7 +187,7 @@ corFast <- function(x, y = NULL, use = "all.obs", method = "pearson",
 {
   if (nThreads==0)
   {
-    nt.env <- Sys.getenv(.threadAllowVar, unset = NA)
+    nt.env <- Sys.getenv("ALLOW_WGCNA_THREADS", unset = NA)
     if (is.na(nt.env)) return(1)
     if (nt.env=="") return(1)
 

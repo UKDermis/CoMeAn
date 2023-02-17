@@ -35,9 +35,11 @@ library(igraph)
 library(tidyverse)
 library(data.table)
 library(Rfast)
+library(tictoc)
 source("R/corFast.R")
 
 # TODO optional community plot
+# TODO: Add time-tracking
 
 construct_conet <- function(exmat, outnam,
                      cutcor=0.8,
@@ -59,6 +61,7 @@ construct_conet <- function(exmat, outnam,
   #TODO: Save on first run and load after
   #TODO: Get current working dictonary
   name <- paste0(outnam, "_corr.csv")
+  tic("Time: Correlation Matrix")
   if(file.exists(name)){
     sset <- data.matrix(read.csv(name, row.names = 1))
     print("Data loaded from storage")
@@ -67,16 +70,15 @@ construct_conet <- function(exmat, outnam,
     utils::write.table(sset,
               file = name,
               sep = ",",
-              row.names = F,
+              row.names = T,
               dec=".",
               quote = F)
   }
-
+  print("Correlation calculated")
+  toc()
 
   # Filter corr table
   diag(sset) <- 0
-  print(typeof(sset))
-  print(head(sset))
   sset <- sset[ abs(rowMaxs(sset)) >= cutcor, ]
   sset <- sset[ , colnames(sset) %in% rownames(sset)]
 
@@ -132,31 +134,20 @@ construct_conet <- function(exmat, outnam,
   Skinsgwcolors <- annottable
 
   # TODO: number of columns of emtpy dataframe has to equal Skingwcolors -> how to automate?
-  Skinsgwcolors <- rbind(Skinsgwcolors,
-                         setNames(data.frame("NA", "NA", "None", "NA", "NA", "NA"),
-                                  colnames(Skinsgwcolors)))
+  Skinsgwcolors <- rbind(Skinsgwcolors, setNames(data.frame("None", "None", "None", "None", "None", "None"), colnames(Skinsgwcolors)))
 
-  scol <- setNames(data.frame(levels(as.factor(Skinsgwcolors$SkinSig.signature)),
-                              stringsAsFactors = F),
-                   "skinsig")
+  scol <- setNames(data.frame(levels(as.factor(Skinsgwcolors$SkinSig.signature)), stringsAsFactors = F), "skinsig")
 
   # Alternative, contrasted coloring, hard-coded
   #TODO: color-coding is meant to go for each skin-segment;
   # assumes that each Skin segment has been assigned a color via hard-coding
   # -> TODO: Automate!
-  colors <- c("black", "#68b2f7", "orange", "#eda65f",
+  scol$scols <- c("black", "#68b2f7", "orange", "#eda65f",
                   "#46f2a2", "#c76e20", "#d12a6d", "#d41f15",
                   "darkblue", "#79ab22", "pink", "#e647d5",
                   "#821522", "magenta", "#f21679", "#81eb3b",
                   "#f5a6d4", "#d1b0c3", "#f0210e", "white",
                   "lightgrey")
-  names(colors) <- unique(SkinSig_annotation$SkinSig.signature)
-  N <- nrow(Skinsgwcolors)-1
-  scols <- vector("list", N)
-  for(i in 1:N){
-    scols[[i]] <- colors[[SkinSig_annotation$SkinSig.signature[i]]]
-  }
-  scol$scols <- scols
 
   Skinsgwcolors <- merge(Skinsgwcolors, as.matrix(scol),
                          by.x = "SkinSig.signature",
