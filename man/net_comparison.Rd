@@ -2,9 +2,17 @@
 % Please edit documentation in R/comparison.R
 \name{net_comparison}
 \alias{net_comparison}
-\title{net_comparison}
+\title{net_comparison
+Compares two graphs based off datastructures found via unsupervised learning}
 \usage{
-net_comparison(file1, file2, min_dist = 0.75)
+net_comparison(
+  graph1 = AD_graph,
+  graph2 = PSO_graph,
+  file1 = "AD",
+  file2 = "PSO",
+  min_dist = 0.75,
+  overlap = "Overlap"
+)
 }
 \arguments{
 \item{file1}{(Required) String, name of the file to be loaded. Default is "AdL"}
@@ -13,6 +21,8 @@ net_comparison(file1, file2, min_dist = 0.75)
 
 \item{min_dist}{(Optional) Float, value the edges/connctions need to larger than to be kept}
 
+\item{overlap}{(Optional) String, specifies the method used to calculate module distance. Default is "Overlap"}
+
 \item{cwd}{(Optional) String, current working directory. Where to find the file. Default is "./PAP/data/"}
 
 \item{format1}{(Optional) String, specifies the file format. Default is "gml"}
@@ -20,6 +30,7 @@ net_comparison(file1, file2, min_dist = 0.75)
 \item{format2}{(Optional) String, specifies the file format. Default is "gml"}
 }
 \description{
+net_comparison
 Compares two graphs based off datastructures found via unsupervised learning
 }
 \examples{

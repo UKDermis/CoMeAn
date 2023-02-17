@@ -2,7 +2,10 @@
 % Please edit documentation in R/single_gene_analysis.R
 \name{single_gene_analysis}
 \alias{single_gene_analysis}
-\title{Single gene and neigbourhood analysis}
+\title{Single gene and neigbourhood analysis
+Extracts a number of values for a specific vertex (read, gene) from the graph,
+returns a vector containing the neighborhood graph, as well as the gene's module membership,
+node degree, and hubscore.}
 \usage{
 single_gene_analysis(graph, gene_name)
 }
@@ -12,8 +15,10 @@ single_gene_analysis(graph, gene_name)
 \item{gene_name}{(Required) Strig name of the vertex that will be analyzed}
 }
 \description{
-Extracts a number of values for a specific vertex (read, gene) from the graph, returns a vector containing the neighborhood graph, as well as the gene's module membership, node degree, and hubscore.
-Params:
+Single gene and neigbourhood analysis
+Extracts a number of values for a specific vertex (read, gene) from the graph,
+returns a vector containing the neighborhood graph, as well as the gene's module membership,
+node degree, and hubscore.
 }
 \examples{
 annmods()

@@ -2,8 +2,7 @@
 % Please edit documentation in R/read_in.R
 \name{read_in}
 \alias{read_in}
-\title{Reads in the specified graph
-Params:}
+\title{Reads in the specified graph}
 \usage{
 read_in(name, cwd = "./", format = "gml", plot = FALSE)
 }
@@ -18,9 +17,8 @@ read_in(name, cwd = "./", format = "gml", plot = FALSE)
 }
 \description{
 Reads in the specified graph
-Params:
 }
 \examples{
-read_in()
+annmods()
 }
 \keyword{helper-function}

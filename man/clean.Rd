@@ -9,7 +9,8 @@ clean(net, keep = c("id", "name", "gsymb"))
 \arguments{
 \item{net}{(Required) The igraph object that is supposed to loose all but the first two vertex attributes}
 
-\item{keep}{(Optional) String-Vector that contains the vertex attributes you want to keep. Default is ("id", "name", "gsymb")}
+\item{keep}{(Optional) String-Vector that contains the vertex attributes you want to keep.
+Default is ("id", "name", "gsymb")}
 }
 \description{
 Removes all vertex attributes except for default or user-specified attributes.

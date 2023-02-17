@@ -1,11 +1,9 @@
 #' Pearson co-expression network Annotate modules with GO terms (from the Clusterprofiler package)
 #'
-#' Annotate gene co-expression network modules, write GO term table and dotplots to working directory.
-#' Specific to HHUDermNetA::pneteset output
+#' Annotate gene co-expression network modules, write GO term table to working directory.
+#' Specific to Comean::construct_conet output
 #'
-#' @import org.Hs.eg.db
 #' @importFrom utils write.table
-#' @importFrom clusterProfiler enrichGO
 #' @importFrom dplyr bind_rows
 #'
 #' @param in_graph (Required) igraph object to annotate
@@ -19,17 +17,21 @@
 #' @examples
 #' annmods()
 
-library(igraph)
-library(tidyverse)
-library(data.table)
-library(Rfast)
-
 annmods <- function(in_graph, univ_genes, outnam, pcut=0.05){
+
+  if (!requireNamespace("clusterProfiler", quietly = TRUE)) {
+    stop("Package clusterProfiler needed for this functionality")
+  }
+
+  if (!requireNamespace("org.Hs.eg.db", quietly = TRUE)) {
+    stop("Package org.Hs.eg.db needed for this functionality")
+  }
+
 
 # GO annotation per cluster
 
-comsum <- setNames(data.frame(V(in_graph)$name, V(in_graph)$module,
-                              V(in_graph)$gsymb),
+comsum <- setNames(data.frame(igraph::V(in_graph)$name, igraph::V(in_graph)$module,
+                              igraph::V(in_graph)$gsymb),
                    c("vertnam", "membership", "symbol"))
 
 comsum <- split(comsum, with(comsum,
@@ -39,30 +41,16 @@ comsum <- split(comsum, with(comsum,
                 drop = TRUE)
 
 goenr1 <- lapply(comsum,
-                 function(x)(
-                   enrichGO(
-                    gene          = x$vertnam,
-                    universe      = univ_genes,
-                    OrgDb         = org.Hs.eg.db,
-                    ont           = "BP",
-                    pAdjustMethod = "BH",
-                    pvalueCutoff  = 0.01,
-                    qvalueCutoff  = 0.05,
-                    readable      = FALSE,
-                    keyType       = 'SYMBOL')
-                   )
-                )
-
-
-# Create dotplots per module before filtering
-p1 <- lapply(goenr1, function(x)(clusterProfiler::dotplot(x, showCategory=20)))
-
-for (i in (1:length(p1))) {
-  file_name <- paste(outnam,"_","GO_module", i, ".png", sep="")
-  png(file_name, width = 800, height = 1000)
-  print(p1[[i]])
-  dev.off()
-}
+                 function(x)(clusterProfiler::enrichGO(
+                   gene          = x$vertnam ,
+                   universe      = univ_genes,
+                   OrgDb         = org.Hs.eg.db,
+                   ont           = "BP",
+                   pAdjustMethod = "BH",
+                   pvalueCutoff  = 0.01,
+                   qvalueCutoff  = 0.05,
+                   readable      = FALSE,
+                   keyType       = 'SYMBOL')))
 
 
 # Filter and save tables in an rbound simple format
@@ -74,7 +62,7 @@ write.table(gotabout,
             file = paste0(outnam, ".csv"),
             sep = "\t",
             row.names = F,
-            dec=",",
+            dec=".",
             quote = F)
 
 }
