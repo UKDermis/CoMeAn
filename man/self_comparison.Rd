@@ -2,8 +2,7 @@
 % Please edit documentation in R/self_comparison.R
 \name{self_comparison}
 \alias{self_comparison}
-\title{Generates new modules for an igraph object and then compares novel modules to the original modules
-Params:}
+\title{Generates new modules for an igraph object and then compares novel modules to the original modules}
 \usage{
 self_comparison(file, min_dist = 0.75, cwd = "./", format = "gml")
 }
@@ -18,10 +17,9 @@ self_comparison(file, min_dist = 0.75, cwd = "./", format = "gml")
 }
 \description{
 Generates new modules for an igraph object and then compares novel modules to the original modules
-Params:
 }
 \examples{
-self_comparison()
+annmods()
 TODO: Add variable to control used distance algorithm, add further analysis
 }
 \keyword{produces_plot}

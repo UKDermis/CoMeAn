@@ -2,8 +2,7 @@
 % Please edit documentation in R/information_table.R
 \name{information_table}
 \alias{information_table}
-\title{Produces a .gml and .csv file based off the passed along igraph object
-Params:}
+\title{Produces a .gml and .csv file based off the passed along igraph object}
 \usage{
 information_table(graph, filename)
 }
@@ -14,7 +13,6 @@ information_table(graph, filename)
 }
 \description{
 Produces a .gml and .csv file based off the passed along igraph object
-Params:
 }
 \examples{
 annmods()

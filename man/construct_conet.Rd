@@ -2,11 +2,21 @@
 % Please edit documentation in R/construct_conet.R
 \name{construct_conet}
 \alias{construct_conet}
-\title{Pearson co-expression network from gene expression matrix}
+\title{Pearson co-expression network from gene expression matrix
+Pearson correlation network based on: 1, gml network file. 2, gene cluster memberships and scores csv
+table. 3, network communities plot (png). 4, network plot SkinSig database overlay (png). Writes to disk.}
 \usage{
-construct_conet(exmat, outnam, cutcor = 0.8, ndeg = 1, negcors = F,
-  annottable = SkinSigPATH_toENSG, plot_signature_overlay = F,
-  layout = layout_with_fr, compsiz = 3)
+construct_conet(
+  exmat,
+  outnam,
+  cutcor = 0.8,
+  ndeg = 1,
+  negcors = F,
+  annottable = SkinSigPATH_toENSG,
+  plot_signature_overlay = F,
+  layout = layout_with_fr,
+  compsiz = 3
+)
 }
 \arguments{
 \item{exmat}{(Required) Input gene expression matrix. Row names must be HGNC gene symbols.}
@@ -17,18 +27,25 @@ construct_conet(exmat, outnam, cutcor = 0.8, ndeg = 1, negcors = F,
 
 \item{ndeg}{(Optional) node degree cutoff (integer). Default=1}
 
-\item{negcors}{(Optional) Boolean; include both negative and positive corrs (TRUE) or only positive (FALSE). Default=FALSE}
+\item{negcors}{(Optional) Boolean; include both negative and positive corrs (TRUE) or only positive (FALSE).
+Default=FALSE}
 
-\item{annottable}{(Optional) Name of gene signature table. Currently the SkinSig pre-formatted table is supported. Default= "SkinSigPATH_toENSG"}
+\item{annottable}{(Optional) Name of gene signature table. Currently the SkinSig pre-formatted table is supported.
+Default= "SkinSigPATH_toENSG"}
 
-\item{plot_signature_overlay}{(Optional) Draw png plot of gene signature enrichment. May crash/take long on low-spec computers. Default=FALSE}
+\item{plot_signature_overlay}{(Optional) Draw png plot of gene signature enrichment.
+May crash/take long on low-spec computers. Default=FALSE}
 
-\item{layout}{(Optional) Define igraph layout of output graphs. For negcors=T, usually layout_as_star, layout_as_tree are preferred. Default= layout_with_fr}
+\item{layout}{(Optional) Define igraph layout of output graphs. For negcors=T, usually layout_as_star,
+layout_as_tree are preferred. Default= layout_with_fr}
 
-\item{compsiz}{(Optional) Define minimum component size under which to discard small components (disconnected subgraphs). Default = 3}
+\item{compsiz}{(Optional) Define minimum component size under which to discard small components
+(disconnected subgraphs). Default = 3}
 }
 \description{
-Pearson correlation network based on.Writes to disk: A, gml network file B, gene cluster memberships and scores csv table 3, network communities plot (png) 4, network plot SkinSig database overlay (png)
+Pearson co-expression network from gene expression matrix
+Pearson correlation network based on: 1, gml network file. 2, gene cluster memberships and scores csv
+table. 3, network communities plot (png). 4, network plot SkinSig database overlay (png). Writes to disk.
 }
 \examples{
 construct_conet()
