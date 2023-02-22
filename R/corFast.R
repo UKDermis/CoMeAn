@@ -45,16 +45,14 @@ corFast <- function(x, y = NULL, use = "all.obs", method = "pearson",
     if (length(weights.y)==0) weights.y <- NULL
 
     x <- as.matrix(x)
-    nx <- ncol(x)
     if (!is.null(y))
     {
       y <- as.matrix(y)
-      ny <- ncol(y)
-    } else ny <- nx
+    }
 
     if ((method=="pearson") && ( (na.method==1) || (na.method==3) ))
     {
-      Cerrors <- c("Memory allocation error")
+      Cerrors <- "Memory allocation error"
       nKnownErrors <- length(Cerrors)
       na.method <- pmatch(use, c("all.obs", "pairwise.complete.obs"))
       if (is.na(na.method))

@@ -35,7 +35,7 @@ library(igraph)
 library(tidyverse)
 library(data.table)
 library(Rfast)
-library(tictoc)
+library(tictoc) # TODO: Remove
 source("R/corFast.R")
 
 # TODO optional community plot
@@ -50,16 +50,16 @@ construct_conet <- function(exmat, outnam,
                      layout=layout_with_fr,
                      compsiz=3,
                      plot=FALSE){
-  #TODO: set exmat to loading here (or separate script), then calculating corr, or load corr directly
-  #TODO: Add check that exmat is matrix, not dataframe
-  #TODO: Add to function signature;
+  # TODO: set exmat to loading here (or separate script), then calculating corr, or load corr directly
+  # TODO: Add check that exmat is matrix, not dataframe
+  # TODO: Add to function signature;
   default_colors <- FALSE
 
   # correlation
-  #TODO: is this the fastest function? If not, replace. Or check if there are things you can do
-  #TODO: Once calculation has been done, save, and load if done again
-  #TODO: Save on first run and load after
-  #TODO: Get current working dictonary
+  # TODO: is this the fastest function? If not, replace. Or check if there are things you can do
+  # TODO: Once calculation has been done, save, and load if done again
+  # TODO: Save on first run and load after
+  # TODO: Get current working dictonary
   name <- paste0(outnam, "_corr.csv")
   tic("Time: Correlation Matrix")
   if(file.exists(name)){
@@ -139,7 +139,7 @@ construct_conet <- function(exmat, outnam,
   scol <- setNames(data.frame(levels(as.factor(Skinsgwcolors$SkinSig.signature)), stringsAsFactors = F), "skinsig")
 
   # Alternative, contrasted coloring, hard-coded
-  #TODO: color-coding is meant to go for each skin-segment;
+  # TODO: color-coding is meant to go for each skin-segment;
   # assumes that each Skin segment has been assigned a color via hard-coding
   # -> TODO: Automate!
   scol$scols <- c("black", "#68b2f7", "orange", "#eda65f",
