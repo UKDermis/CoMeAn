@@ -35,11 +35,7 @@ library(igraph)
 library(tidyverse)
 library(data.table)
 library(Rfast)
-library(tictoc) # TODO: Remove
 source("R/corFast.R")
-
-# TODO optional community plot
-# TODO: Add time-tracking
 
 construct_conet <- function(exmat, outnam,
                      cutcor=0.8,
@@ -49,19 +45,17 @@ construct_conet <- function(exmat, outnam,
                      plot_signature_overlay=F,
                      layout=layout_with_fr,
                      compsiz=3,
-                     plot=FALSE){
-  # TODO: set exmat to loading here (or separate script), then calculating corr, or load corr directly
-  # TODO: Add check that exmat is matrix, not dataframe
-  # TODO: Add to function signature;
-  default_colors <- FALSE
+                     plot=F,
+                     default_colors=F){
+  # check if input was entered correctly:
+  if (is(my_var, data.matrix)) {
+    print("Input is correct data type")
+  } else {
+    stop("Input was not entered correctly")
+  }
 
   # correlation
-  # TODO: is this the fastest function? If not, replace. Or check if there are things you can do
-  # TODO: Once calculation has been done, save, and load if done again
-  # TODO: Save on first run and load after
-  # TODO: Get current working dictonary
   name <- paste0(outnam, "_corr.csv")
-  tic("Time: Correlation Matrix")
   if(file.exists(name)){
     sset <- data.matrix(read.csv(name, row.names = 1))
     print("Data loaded from storage")
@@ -74,8 +68,6 @@ construct_conet <- function(exmat, outnam,
               dec=".",
               quote = F)
   }
-  print("Correlation calculated")
-  toc()
 
   # Filter corr table
   diag(sset) <- 0
@@ -132,22 +124,13 @@ construct_conet <- function(exmat, outnam,
   # Overlay Skinsig annotation, currently only specific skinsig file works
 
   Skinsgwcolors <- annottable
-
-  # TODO: number of columns of emtpy dataframe has to equal Skingwcolors -> how to automate?
-  Skinsgwcolors <- rbind(Skinsgwcolors, setNames(data.frame("None", "None", "None", "None", "None", "None"), colnames(Skinsgwcolors)))
-
+  df <- data.frame(matrix("None", nrow = 1, ncol = ncol(Skinsgwcolors)))
+  Skinsgwcolors <- rbind(Skinsgwcolors, setNames(df, colnames(Skinsgwcolors)))
   scol <- setNames(data.frame(levels(as.factor(Skinsgwcolors$SkinSig.signature)), stringsAsFactors = F), "skinsig")
 
-  # Alternative, contrasted coloring, hard-coded
-  # TODO: color-coding is meant to go for each skin-segment;
-  # assumes that each Skin segment has been assigned a color via hard-coding
-  # -> TODO: Automate!
-  scol$scols <- c("black", "#68b2f7", "orange", "#eda65f",
-                  "#46f2a2", "#c76e20", "#d12a6d", "#d41f15",
-                  "darkblue", "#79ab22", "pink", "#e647d5",
-                  "#821522", "magenta", "#f21679", "#81eb3b",
-                  "#f5a6d4", "#d1b0c3", "#f0210e", "white",
-                  "lightgrey")
+  # automated color assignment
+  set.seed(123)
+  scol$scols <- rainbow(length(unique(Skinsgwcolors$SkinSig.signature)))
 
   Skinsgwcolors <- merge(Skinsgwcolors, as.matrix(scol),
                          by.x = "SkinSig.signature",
