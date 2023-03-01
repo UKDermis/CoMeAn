@@ -47,6 +47,7 @@ construct_conet <- function(exmat, outnam,
                      compsiz=3,
                      plot=F,
                      default_colors=F){
+
   # check if input was entered correctly:
   if (is(my_var, data.matrix)) {
     print("Input is correct data type")
@@ -88,9 +89,7 @@ construct_conet <- function(exmat, outnam,
 
 
   # print out component sizes before filtering
-
   ingrp <- decompose.graph(sset)
-
   ingrp <- summary(as.factor(sapply(ingrp, vcount)))
 
   print("Individual components/size BEFORE FILTERING:"); print( ingrp )
@@ -110,19 +109,13 @@ construct_conet <- function(exmat, outnam,
   #remove nodes by name
   sset <- delete_vertices(sset, sub_gs$genams)
 
-
   # print out component sizes after filtering
-
   ingrp <- decompose.graph(sset)
-
   ingrp <- summary(as.factor(sapply(ingrp, vcount)))
 
   print("Individual components/size AFTER filtering:"); print( ingrp )
 
-
-
   # Overlay Skinsig annotation, currently only specific skinsig file works
-
   Skinsgwcolors <- annottable
   df <- data.frame(matrix("None", nrow = 1, ncol = ncol(Skinsgwcolors)))
   Skinsgwcolors <- rbind(Skinsgwcolors, setNames(df, colnames(Skinsgwcolors)))
@@ -137,7 +130,6 @@ construct_conet <- function(exmat, outnam,
                          by.y = "skinsig",
                          all.x = T,
                          all.y = F)
-
 
   # Annotate vertices
 
@@ -168,10 +160,7 @@ construct_conet <- function(exmat, outnam,
   V(sset)$gcol <- as.character(skns1$scols)
 
   # Community (module) detection
-
   if (negcors) {
-
-
     print("no community detection due to negative edge weights")
 
     clvtab <- setNames(data.frame(V(sset)$name, V(sset)$gsymb,
@@ -181,8 +170,8 @@ construct_conet <- function(exmat, outnam,
                        c("ID", "Symbol", "SkinSig",
                          "Color", "Degree",
                          "HubScore"))
-    # Color edges by weight
 
+    # Color edges by weight
     E(sset)$color <- "green"
     E(sset)[weight>0]$color <- "blue"
     E(sset)[weight<0]$color <- "red"
@@ -204,13 +193,9 @@ construct_conet <- function(exmat, outnam,
                   c("ID", "Symbol", "SkinSig",
                     "Color", "Module", "Degree",
                     "HubScore"))
-
-
-
   }
 
-  # Output
-
+  # Save Output
   write_graph(sset,
               file = paste0(outnam, "_network.gml"),
               format = "gml")
@@ -223,10 +208,8 @@ construct_conet <- function(exmat, outnam,
               quote = F)
 
 
-  # community plot
-
+  # Do community plot
   # Optionally define layout, default=Fruchteman-Reingold
-
   vii2 <- layout(sset)
 
   if(plot){
@@ -273,5 +256,4 @@ construct_conet <- function(exmat, outnam,
   closeAllConnections()
 
   return(sset)
-
 }
