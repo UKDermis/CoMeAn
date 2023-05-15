@@ -1,5 +1,5 @@
 /*
-Calculation of unweighted Pearson and biweght midcorrelation.
+Calculation of unweighted Pearson and bi-weight mid-correlation.
 
 Copyright (C) 2008 Peter Langfelder; parts based on R by R Development team
 
@@ -114,7 +114,7 @@ typedef struct
    double quick;
 }  slowCalc2ThreadData;
 
-// Data for NAing out appropriate rows and columns
+// Data for NA-ing out appropriate rows and columns
 
 typedef struct
 {

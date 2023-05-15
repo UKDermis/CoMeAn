@@ -9,7 +9,7 @@
 #' @export
 #' @examples
 #' gene_mem_comp()
-# @param outnam (Required) output filename for similarity matrix (tsv table)
+#' @param outnam (Required) output filename for similarity matrix (tsv table)
 
 
 gene_mem_comp <- function(in_graphs){
@@ -18,11 +18,11 @@ gene_mem_comp <- function(in_graphs){
   gfrm <- lapply(in_graphs, function(gs){ as.data.frame(cbind(V(gs)$module,
                                V(gs)$gsymb))} )
 
-  for (i in 1:length(gfrm)) {
+  for (i in seq_along(gfrm)) {
     gfrm[[i]]$V1 <- sprintf("%02d", as.numeric(gfrm[[i]]$V1))
   }
 
-  for (i in 1:length(gfrm)) {
+  for (i in seq_along(gfrm)) {
     gfrm[[i]]$modassgn <- paste0(names(in_graphs)[[i]],
                                  "_M", gfrm[[i]]$V1)
   }
@@ -33,8 +33,8 @@ gene_mem_comp <- function(in_graphs){
  g3b <- split(g3, as.factor(g3$modassgn), drop = T)
 
  mat1 <- matrix(nrow = length(g3b), ncol = length(g3b))
- for (i in 1:length(g3b)) {
-   for (j in 1:length(g3b)) {
+ for (i in seq_along(g3b)) {
+   for (j in seq_along(g3b)) {
      mat1[ i,j ] <- length( intersect(g3b[[j]]$V2, g3b[[i]]$V2) )
    }
  }

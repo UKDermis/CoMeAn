@@ -1,4 +1,4 @@
-#' Pearson co-expression network Annotate modules with enrichR package
+#' Pearson co-expression network; Annotate modules with enrichR package
 #'
 #' Annotate gene co-expression network modules, write enrichment term table to working directory.
 #' Specific to Comean::construct_conet output

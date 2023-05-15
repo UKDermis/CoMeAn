@@ -1,3 +1,8 @@
+library(igraph)
+library(tidyverse)
+library(data.table)
+library(Rfast)
+source("R/corFast.R")
 
 #' Pearson co-expression network from gene expression matrix
 #' Pearson correlation network based on: 1, gml network file. 2, gene cluster memberships and scores csv
@@ -30,12 +35,6 @@
 #' @export
 #' @examples
 #' construct_conet()
-
-library(igraph)
-library(tidyverse)
-library(data.table)
-library(Rfast)
-source("R/corFast.R")
 
 construct_conet <- function(exmat, outnam,
                      cutcor=0.8,

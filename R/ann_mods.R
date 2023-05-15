@@ -1,6 +1,6 @@
 #' Pearson co-expression network Annotate modules with GO terms (from the Clusterprofiler package)
 #'
-#' Annotate gene co-expression network modules, write GO term table to working directory.
+#' Annotated gene co-expression network modules, write GO term table to working directory.
 #' Specific to Comean::construct_conet output
 #'
 #' @importFrom utils write.table

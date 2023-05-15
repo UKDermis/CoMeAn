@@ -1,3 +1,5 @@
+dyn.load("src/corFunctions.so")
+
 #' Title     : corFast
 #' Objective : Import the implementation of matrix-correlation calculation from the WGCNA package
 #' Created by: Nicholas Schmitt
@@ -9,7 +11,7 @@
 #' BMC Bioinformatics, 559. https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-9-559.
 
 #' The reason why we aren't including the WGCNA package as a dependency is because the package relies on a few libraries
-#' which aren't available for R >= 4.0.0 as of writing this code.
+#' which weren't available for R >= 4.0.0 as of writing this code.
 
 #'  Copyright (C) 2008 Peter Langfelder; parts based on R by R Development team
 #'  This program is free software; you can redistribute it and/or
@@ -23,10 +25,6 @@
 #'  You should have received a copy of the GNU General Public License
 #'  along with this program; if not, write to the Free Software
 #'  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
-
-dyn.load("src/corFunctions.so")
-
-print("load successful")
 
 corFast <- function(x, y = NULL, use = "all.obs", method = "pearson",
                weights.x = NULL, weights.y = NULL,

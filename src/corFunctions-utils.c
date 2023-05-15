@@ -6,7 +6,7 @@
 
 /*
  * General notes about handling missing data, zero MAD etc:
- * The idea is that bicor should switch to cor whenever it is feasible, it helps, and it is requested:
+ * The idea is that bi-cor should switch to cor whenever it is feasible, it helps, and it is requested:
  * (1) if median is NA, the mean would be NA as well, so there's no point in switching to Pearson
  * (2) In the results, columns and rows corresponding to input with NA means/medians are NA'd out.
  * (3) The convention is that if zeroMAD is set to non-zero, it is the index of the column in which MAD is

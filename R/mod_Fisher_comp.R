@@ -10,7 +10,7 @@
 #' @export
 #' @examples
 #' mod_Fisher_comp()
-# @param outnam (Required) output filename for similarity matrix (csv table)
+#' @param outnam (Required) output filename for similarity matrix (csv table)
 
 mod_Fisher_comp <- function(in_graphs, markgens){
 
@@ -18,11 +18,11 @@ mod_Fisher_comp <- function(in_graphs, markgens){
                                                               V(gs)$gsymb,
                                                               V(gs)$sknsg))} )
 
-  for (i in 1:length(gfrm)) {
+  for (i in seq_along(gfrm)) {
     gfrm[[i]]$V1 <- sprintf("%02d", as.numeric(gfrm[[i]]$V1))
   }
 
-  for (i in 1:length(gfrm)) {
+  for (i in seq_along(gfrm)) {
     gfrm[[i]]$modassgn <- paste0(names(in_graphs)[[i]],
                                  "_M", gfrm[[i]]$V1)
   }
