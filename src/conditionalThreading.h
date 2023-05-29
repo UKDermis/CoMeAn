@@ -38,7 +38,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
   // This prevents competing definitions of pthread types to be included
   #define _BITS_PTHREADTYPES_H
 
-  typedef int pthread_mutex_t;
+  typedef int pthread_mutex_ref; // replaced pthread_mutex_t to avoid clash with CLANG interpreter
   typedef int pthread_t;
   // in the original code this was called "pthread_attr_t",
   // which causes issues with arm64 macs, as the OS uses this variable internally already, hence the change
@@ -46,8 +46,8 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 
   #define PTHREAD_MUTEX_INITIALIZER 0
 
-  static inline void pthread_mutex_lock ( pthread_mutex_t * lock ) { }
-  static inline void pthread_mutex_unlock ( pthread_mutex_t * lock ) { }
+  static inline void pthread_mutex_lock ( pthread_mutex_ref * lock ) { }
+  static inline void pthread_mutex_unlock ( pthread_mutex_ref * lock ) { }
 
   static inline int pthread_join ( pthread_t t, void ** p) { return 0; }
 
@@ -56,12 +56,12 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 
 // Conditional pthread routines
 
-static inline void pthread_mutex_lock_c( pthread_mutex_t * lock, int threaded)
+static inline void pthread_mutex_lock_c( pthread_mutex_ref * lock, int threaded)
 {
   if (threaded) pthread_mutex_lock(lock);
 }
 
-static inline void pthread_mutex_unlock_c(pthread_mutex_t * lock, int threaded)
+static inline void pthread_mutex_unlock_c(pthread_mutex_ref * lock, int threaded)
 {
   if (threaded) pthread_mutex_unlock(lock);
 }

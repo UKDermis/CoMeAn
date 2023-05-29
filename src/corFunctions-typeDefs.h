@@ -76,7 +76,7 @@ typedef struct
 {
    cor1ThreadData * x;
    progressCounter * pc;
-   pthread_mutex_t * lock;
+   pthread_mutex_ref * lock;
 }  colPrepThreadData;
 
 // Information for symmetrization
@@ -94,7 +94,7 @@ typedef struct
    cor1ThreadData * x;
    progressCounter * pci, * pcj;
    size_t * nSlow, * nNA;
-   pthread_mutex_t * lock;
+   pthread_mutex_ref * lock;
 }  slowCalcThreadData;
 
 /*==============================================================================================
@@ -110,7 +110,7 @@ typedef struct
    cor2ThreadData * x;
    progressCounter * pci, *pcj;
    size_t * nSlow, * nNA;
-   pthread_mutex_t * lock;
+   pthread_mutex_ref * lock;
    double quick;
 }  slowCalc2ThreadData;
 
