@@ -1,4 +1,4 @@
-ww
+
 /*
    The following code is taken wholesale from the WGCNA package.
    The original paper can be found here:
