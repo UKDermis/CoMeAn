@@ -125,7 +125,7 @@ SEXP bicor2_call(SEXP x_s, SEXP y_s,
   #define _BITS_PTHREADTYPES_H
 
   typedef int pthread_mutex_t;
-  typedef int pthread_t;
+  typedef int pthread_ref; // used to be pthread_t, changed because of a clash with a CLANG variable
   // in the original code this was called "pthread_attr_t",
   // which causes issues with arm64 macs, as the OS uses this variable internally already, hence the change
   typedef int pthread_attr;
@@ -135,7 +135,7 @@ SEXP bicor2_call(SEXP x_s, SEXP y_s,
   static inline void pthread_mutex_lock ( pthread_mutex_t * lock ) { }
   static inline void pthread_mutex_unlock ( pthread_mutex_t * lock ) { }
 
-  static inline int pthread_join ( pthread_t t, void ** p) { return 0; }
+  static inline int pthread_join ( pthread_ref t, void ** p) { return 0; }
 
 #endif
 
@@ -152,7 +152,7 @@ static inline void pthread_mutex_unlock_c(pthread_mutex_t * lock, int threaded)
   if (threaded) pthread_mutex_unlock(lock);
 }
 
-static inline int pthread_create_c(pthread_t *thread, const pthread_attr *attr,
+static inline int pthread_create_c(pthread_ref *thread, const pthread_attr *attr,
     void *(*start_routine)(void*), void *arg, int threaded)
 {
   #ifdef WITH_THREADS
@@ -164,7 +164,7 @@ static inline int pthread_create_c(pthread_t *thread, const pthread_attr *attr,
   return 0;
 }
 
-static inline int pthread_join_c(pthread_t thread, void * * value_ptr, int threaded)
+static inline int pthread_join_c(pthread_ref thread, void * * value_ptr, int threaded)
 {
   if (threaded) return pthread_join(thread, (void * *) value_ptr);
   return 0;
@@ -2220,7 +2220,7 @@ void cor1Fast(double * x, int * nrow, int * ncol,
   // Column preparation (calculation of the matrix to be multiplied) in a threaded form.
 
   colPrepThreadData  cptd[MxThreads];
-  pthread_t  thr[MxThreads];
+  pthread_ref  thr[MxThreads];
   int       status[MxThreads];
 
   pthread_mutex_t mutex1 = PTHREAD_MUTEX_INITIALIZER;
@@ -2276,7 +2276,7 @@ void cor1Fast(double * x, int * nrow, int * ncol,
       progressCounter pci, pcj;
       pthread_mutex_t mutexSC = PTHREAD_MUTEX_INITIALIZER;
 
-      pthread_t  thr3[MxThreads];
+      pthread_ref  thr3[MxThreads];
 
       pci.i = 0;
       pci.n = nc;
@@ -2319,7 +2319,7 @@ void cor1Fast(double * x, int * nrow, int * ncol,
   pc.i = 0;
   pc.n = nc;
 
-  pthread_t  thr2[MxThreads];
+  pthread_ref  thr2[MxThreads];
 
   // Rprintf("symmetrizing... nt=%d\n", nt);
   for (int t=0; t<nt; t++)
@@ -2470,7 +2470,7 @@ void bicor1Fast(double * x, int * nrow, int * ncol, double * maxPOutliers,
   // Column preparation (calculation of the matrix to be multiplied) in a threaded form.
 
   colPrepThreadData  cptd[MxThreads];
-  pthread_t  thr[MxThreads];
+  pthread_ref  thr[MxThreads];
   int       status[MxThreads];
 
   pthread_mutex_t mutex1 = PTHREAD_MUTEX_INITIALIZER;
@@ -2562,7 +2562,7 @@ void bicor1Fast(double * x, int * nrow, int * ncol, double * maxPOutliers,
       progressCounter pci, pcj;
       pthread_mutex_t mutexSC = PTHREAD_MUTEX_INITIALIZER;
 
-      pthread_t  thr3[MxThreads];
+      pthread_ref  thr3[MxThreads];
 
       pci.i = 0;
       pci.n = nc;
@@ -2604,7 +2604,7 @@ void bicor1Fast(double * x, int * nrow, int * ncol, double * maxPOutliers,
   pc.i = 0;
   pc.n = nc;
 
-  pthread_t  thr2[MxThreads];
+  pthread_ref  thr2[MxThreads];
 
   // Rprintf("symmetrizing... nt=%d\n", nt);
   for (int t=0; t<nt; t++)
@@ -2812,7 +2812,7 @@ void bicorFast(double * x, int * nrow, int * ncolx, double * y, int * ncoly,
   // Rprintf(" ..preparing columns in x\n");
 
   colPrepThreadData  cptd[MxThreads];
-  pthread_t  thr[MxThreads];
+  pthread_ref  thr[MxThreads];
   int       status[MxThreads];
 
   progressCounter pcX, pcY;
@@ -2993,7 +2993,7 @@ void bicorFast(double * x, int * nrow, int * ncolx, double * y, int * ncoly,
       slowCalc2ThreadData  sctd[MxThreads];
       pthread_mutex_t mutexSC = PTHREAD_MUTEX_INITIALIZER;
 
-      pthread_t  thr3[MxThreads];
+      pthread_ref  thr3[MxThreads];
 
       pcX.i = 0; pcY.i = 0;
 
@@ -3031,7 +3031,7 @@ void bicorFast(double * x, int * nrow, int * ncolx, double * y, int * ncoly,
   pcX.i = 0;
   pcY.i = 0;
 
-  pthread_t  thr2[MxThreads];
+  pthread_ref  thr2[MxThreads];
 
   for (int t=0; t<nt; t++)
   {
@@ -3206,7 +3206,7 @@ void corFast(double * x, int * nrow, int * ncolx, double * y, int * ncoly,
   // Prepare the multMat columns in X and Y
 
   colPrepThreadData  cptd[MxThreads];
-  pthread_t  thr[MxThreads];
+  pthread_ref  thr[MxThreads];
   int       status[MxThreads];
 
   progressCounter pcX, pcY;
@@ -3295,7 +3295,7 @@ void corFast(double * x, int * nrow, int * ncolx, double * y, int * ncoly,
       slowCalc2ThreadData  sctd[MxThreads];
       pthread_mutex_t mutexSC = PTHREAD_MUTEX_INITIALIZER;
 
-      pthread_t  thr3[MxThreads];
+      pthread_ref  thr3[MxThreads];
 
       pcX.i = 0; pcY.i = 0;
 
@@ -3334,7 +3334,7 @@ void corFast(double * x, int * nrow, int * ncolx, double * y, int * ncoly,
   pcX.i = 0;
   pcY.i = 0;
 
-  pthread_t  thr2[MxThreads];
+  pthread_ref  thr2[MxThreads];
 
   for (int t=0; t<nt; t++)
   {

@@ -39,7 +39,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
   #define _BITS_PTHREADTYPES_H
 
   typedef int pthread_mutex_ref; // replaced pthread_mutex_t to avoid clash with CLANG interpreter
-  typedef int pthread_t;
+  typedef int pthread_ref;
   // in the original code this was called "pthread_attr_t",
   // which causes issues with arm64 macs, as the OS uses this variable internally already, hence the change
   typedef int pthread_attr;
@@ -49,7 +49,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
   static inline void pthread_mutex_lock ( pthread_mutex_ref * lock ) { }
   static inline void pthread_mutex_unlock ( pthread_mutex_ref * lock ) { }
 
-  static inline int pthread_join ( pthread_t t, void ** p) { return 0; }
+  static inline int pthread_join ( pthread_ref t, void ** p) { return 0; }
 
 #endif
 
@@ -66,7 +66,7 @@ static inline void pthread_mutex_unlock_c(pthread_mutex_ref * lock, int threaded
   if (threaded) pthread_mutex_unlock(lock);
 }
 
-static inline int pthread_create_c(pthread_t *thread, const pthread_attr *attr,
+static inline int pthread_create_c(pthread_ref *thread, const pthread_attr *attr,
     void *(*start_routine)(void*), void *arg, int threaded)
 {
   #ifdef WITH_THREADS
@@ -78,7 +78,7 @@ static inline int pthread_create_c(pthread_t *thread, const pthread_attr *attr,
   return 0;
 }
 
-static inline int pthread_join_c(pthread_t thread, void * * value_ptr, int threaded)
+static inline int pthread_join_c(pthread_ref thread, void * * value_ptr, int threaded)
 {
   if (threaded) return pthread_join(thread, (void * *) value_ptr);
   return 0;
