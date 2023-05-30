@@ -124,16 +124,16 @@ SEXP bicor2_call(SEXP x_s, SEXP y_s,
   // This prevents competing definitions of pthread types to be included
   #define _BITS_PTHREADTYPES_H
 
-  typedef int pthread_mutex_t;
-  typedef int pthread_ref; // used to be pthread_t, changed because of a clash with a CLANG variable
+  typedef int pthread_mutex_ref; // used to be pthread_mutex_t, changed to avoid a clash with a CLANG variable
+  typedef int pthread_ref; // used to be pthread_t, changed to avoid a clash with a CLANG variable
   // in the original code this was called "pthread_attr_t",
   // which causes issues with arm64 macs, as the OS uses this variable internally already, hence the change
   typedef int pthread_attr;
 
   #define PTHREAD_MUTEX_INITIALIZER 0
 
-  static inline void pthread_mutex_lock ( pthread_mutex_t * lock ) { }
-  static inline void pthread_mutex_unlock ( pthread_mutex_t * lock ) { }
+  static inline void pthread_mutex_lock ( pthread_mutex_ref * lock ) { }
+  static inline void pthread_mutex_unlock ( pthread_mutex_ref * lock ) { }
 
   static inline int pthread_join ( pthread_ref t, void ** p) { return 0; }
 
@@ -142,12 +142,12 @@ SEXP bicor2_call(SEXP x_s, SEXP y_s,
 
 // Conditional pthread routines
 
-static inline void pthread_mutex_lock_c( pthread_mutex_t * lock, int threaded)
+static inline void pthread_mutex_lock_c( pthread_mutex_ref * lock, int threaded)
 {
   if (threaded) pthread_mutex_lock(lock);
 }
 
-static inline void pthread_mutex_unlock_c(pthread_mutex_t * lock, int threaded)
+static inline void pthread_mutex_unlock_c(pthread_mutex_ref * lock, int threaded)
 {
   if (threaded) pthread_mutex_unlock(lock);
 }
@@ -556,7 +556,7 @@ typedef struct
 {
    cor1ThreadData * x;
    progressCounter * pc;
-   pthread_mutex_t * lock;
+   pthread_mutex_ref * lock;
 }  colPrepThreadData;
 
 // Information for symmetrization
@@ -574,7 +574,7 @@ typedef struct
    cor1ThreadData * x;
    progressCounter * pci, * pcj;
    size_t * nSlow, * nNA;
-   pthread_mutex_t * lock;
+   pthread_mutex_ref * lock;
 }  slowCalcThreadData;
 
 /*==============================================================================================
@@ -590,7 +590,7 @@ typedef struct
    cor2ThreadData * x;
    progressCounter * pci, *pcj;
    size_t * nSlow, * nNA;
-   pthread_mutex_t * lock;
+   pthread_mutex_ref * lock;
    double quick;
 }  slowCalc2ThreadData;
 
@@ -2223,7 +2223,7 @@ void cor1Fast(double * x, int * nrow, int * ncol,
   pthread_ref  thr[MxThreads];
   int       status[MxThreads];
 
-  pthread_mutex_t mutex1 = PTHREAD_MUTEX_INITIALIZER;
+  pthread_mutex_ref mutex1 = PTHREAD_MUTEX_INITIALIZER;
   progressCounter pc;
 
   pc.i = 0;
@@ -2274,7 +2274,7 @@ void cor1Fast(double * x, int * nrow, int * ncol,
       // Parallelized slow calculations
       slowCalcThreadData  sctd[MxThreads];
       progressCounter pci, pcj;
-      pthread_mutex_t mutexSC = PTHREAD_MUTEX_INITIALIZER;
+      pthread_mutex_ref mutexSC = PTHREAD_MUTEX_INITIALIZER;
 
       pthread_ref  thr3[MxThreads];
 
@@ -2473,7 +2473,7 @@ void bicor1Fast(double * x, int * nrow, int * ncol, double * maxPOutliers,
   pthread_ref  thr[MxThreads];
   int       status[MxThreads];
 
-  pthread_mutex_t mutex1 = PTHREAD_MUTEX_INITIALIZER;
+  pthread_mutex_ref mutex1 = PTHREAD_MUTEX_INITIALIZER;
   progressCounter pc;
 
   pc.i = 0;
@@ -2514,7 +2514,7 @@ void bicor1Fast(double * x, int * nrow, int * ncol, double * maxPOutliers,
       // Set fallback to 4 for slow calculations below.
       for (int t = 0; t < nt; t++) thrdInfo[t].fallback = 4;
 
-      pthread_mutex_t mutex2 = PTHREAD_MUTEX_INITIALIZER;
+      pthread_mutex_ref mutex2 = PTHREAD_MUTEX_INITIALIZER;
       pc.i = 0;
       pc.n = nc;
 
@@ -2560,7 +2560,7 @@ void bicor1Fast(double * x, int * nrow, int * ncol, double * maxPOutliers,
       // Parallelized slow calculations
       slowCalcThreadData  sctd[MxThreads];
       progressCounter pci, pcj;
-      pthread_mutex_t mutexSC = PTHREAD_MUTEX_INITIALIZER;
+      pthread_mutex_ref mutexSC = PTHREAD_MUTEX_INITIALIZER;
 
       pthread_ref  thr3[MxThreads];
 
@@ -2820,7 +2820,7 @@ void bicorFast(double * x, int * nrow, int * ncolx, double * y, int * ncoly,
 
   // Prepare columns in X
 
-  pthread_mutex_t mutex1 = PTHREAD_MUTEX_INITIALIZER;
+  pthread_mutex_ref mutex1 = PTHREAD_MUTEX_INITIALIZER;
 
   pcX.i = 0;
   pcX.n = ncx;
@@ -2859,7 +2859,7 @@ void bicorFast(double * x, int * nrow, int * ncolx, double * y, int * ncoly,
     {
       for (int t = 0; t < nt; t++) thrdInfoX[t].fallback = 4;
 
-      pthread_mutex_t mutex2 = PTHREAD_MUTEX_INITIALIZER;
+      pthread_mutex_ref mutex2 = PTHREAD_MUTEX_INITIALIZER;
       pcX.i = 0;
       pcX.n = ncx;
 
@@ -2883,7 +2883,7 @@ void bicorFast(double * x, int * nrow, int * ncolx, double * y, int * ncoly,
   // Prepare columns in Y
 
   // Rprintf(" ..preparing columns in y\n");
-  pthread_mutex_t mutex1Y = PTHREAD_MUTEX_INITIALIZER;
+  pthread_mutex_ref mutex1Y = PTHREAD_MUTEX_INITIALIZER;
 
   pcY.i = 0;
   pcY.n = ncy;
@@ -2923,7 +2923,7 @@ void bicorFast(double * x, int * nrow, int * ncolx, double * y, int * ncoly,
     {
       for (int t = 0; t < nt; t++) thrdInfoY[t].fallback = 4;
 
-      pthread_mutex_t mutex2Y = PTHREAD_MUTEX_INITIALIZER;
+      pthread_mutex_ref mutex2Y = PTHREAD_MUTEX_INITIALIZER;
       pcY.i = 0;
       pcY.n = ncy;
 
@@ -2991,7 +2991,7 @@ void bicorFast(double * x, int * nrow, int * ncolx, double * y, int * ncoly,
   if (*quick < 1.0)
   {
       slowCalc2ThreadData  sctd[MxThreads];
-      pthread_mutex_t mutexSC = PTHREAD_MUTEX_INITIALIZER;
+      pthread_mutex_ref mutexSC = PTHREAD_MUTEX_INITIALIZER;
 
       pthread_ref  thr3[MxThreads];
 
@@ -3213,7 +3213,7 @@ void corFast(double * x, int * nrow, int * ncolx, double * y, int * ncoly,
 
   // Prepare columns in X
 
-  pthread_mutex_t mutex1 = PTHREAD_MUTEX_INITIALIZER;
+  pthread_mutex_ref mutex1 = PTHREAD_MUTEX_INITIALIZER;
 
   pcX.i = 0;
   pcX.n = ncx;
@@ -3237,7 +3237,7 @@ void corFast(double * x, int * nrow, int * ncolx, double * y, int * ncoly,
 
   // Prepare columns in Y
 
-  pthread_mutex_t mutex1Y = PTHREAD_MUTEX_INITIALIZER;
+  pthread_mutex_ref mutex1Y = PTHREAD_MUTEX_INITIALIZER;
 
   pcY.i = 0;
   pcY.n = ncy;
@@ -3293,7 +3293,7 @@ void corFast(double * x, int * nrow, int * ncolx, double * y, int * ncoly,
   if (*quick < 1.0)
   {
       slowCalc2ThreadData  sctd[MxThreads];
-      pthread_mutex_t mutexSC = PTHREAD_MUTEX_INITIALIZER;
+      pthread_mutex_ref mutexSC = PTHREAD_MUTEX_INITIALIZER;
 
       pthread_ref  thr3[MxThreads];
 
