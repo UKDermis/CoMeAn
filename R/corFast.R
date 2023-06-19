@@ -1,4 +1,12 @@
-dyn.load("src/corFunctions.so")
+# loading of library is dependent on finished library vs programming work
+tryCatch(
+  dyn.load("libs/corFunctions.so"), # compiling to packages changes "src" folder to "libs" -> load from that folder instead
+  error = function(e) {
+    dyn.load("src/corFunctions.so") # Error handling code -> for development; loads from src folder
+  },
+  warning = function(w) {},
+  finally = {}
+)
 
 #' Title     : corFast
 #' Objective : Import the implementation of matrix-correlation calculation from the WGCNA package
