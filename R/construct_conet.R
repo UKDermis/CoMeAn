@@ -48,7 +48,7 @@ construct_conet <- function(exmat, outnam,
                      default_colors=F){
 
   # check if input was entered correctly:
-  if (is(my_var, data.matrix)) {
+  if (is(exmat, data.matrix)) {
     print("Input is correct data type")
   } else {
     stop("Input was not entered correctly")
