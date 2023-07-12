@@ -3,6 +3,13 @@
   <component name="JupyterPersistentConnectionParameters">
     <option name="moduleParameters">
       <map>
+        <entry key="$USER_HOME$/Documents/Current Semester/Deep Learning/.idea/Deep Learning.iml">
+          <value>
+            <JupyterConnectionParameters>
+              <option name="managed" value="true" />
+            </JupyterConnectionParameters>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../../../Current Semester/Deep Learning/.idea/Deep Learning.iml">
           <value>
             <JupyterConnectionParameters>
@@ -10,7 +17,7 @@
             </JupyterConnectionParameters>
           </value>
         </entry>
-        <entry key="$USER_HOME$/Library/Mobile Documents/com~apple~CloudDocs/Homey/CoMeAn/.idea/CoMeAn.iml">
+        <entry key="$PROJECT_DIR$/../../../Homey/CoMeAn/.idea/CoMeAn.iml">
           <value>
             <JupyterConnectionParameters>
               <option name="managed" value="true" />

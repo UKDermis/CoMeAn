@@ -47,13 +47,6 @@ construct_conet <- function(exmat, outnam,
                      plot=F,
                      default_colors=F){
 
-  # check if input was entered correctly:
-  if (is(exmat, data.matrix)) {
-    print("Input is correct data type")
-  } else {
-    stop("Input was not entered correctly")
-  }
-
   # correlation
   name <- paste0(outnam, "_corr.csv")
   if(file.exists(name)){
