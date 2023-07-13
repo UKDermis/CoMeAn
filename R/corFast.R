@@ -136,7 +136,7 @@ corFast <- function(x, y = NULL, use = "all.obs", method = "pearson",
          res <- .Call("cor1Fast_call", x, weights.x,
                    quick, cosine,
                    nNA, err, nThreads,
-                   verbose, indent)
+                   verbose, indent, PACKAGE = "CoMeAn")
          if (!is.null(dimnames(x)[[2]])) dimnames(res) <- list(dimnames(x)[[2]],  dimnames(x)[[2]] )
       } else {
          y <- as.matrix(y)
