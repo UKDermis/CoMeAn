@@ -17,7 +17,7 @@ Since most functions produce multiple large output files of various formats, out
 ```
  Optional dependencies for functional enrichment
 ```{r echo=T, eval=FALSE}
- BiocManager::install(c("clusterProfiler", "org.Hs.eg.db")
+ BiocManager::install(c("clusterProfiler", "org.Hs.eg.db"))
  devtools::install_github("wjawaid/enrichR")
 ```
 ### Load required packages:
