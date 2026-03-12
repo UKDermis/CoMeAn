@@ -13,7 +13,7 @@ CoMeAn offers tools for the generation of richly annotated co-expression network
 Optional dependencies for functional enrichment
 
 ```{r echo=T, eval=FALSE}
- BiocManager::install(c("clusterProfiler", "org.Hs.eg.db")
+ BiocManager::install(c("clusterProfiler", "org.Hs.eg.db"))
  devtools::install_github("wjawaid/enrichR")
 ```
 
