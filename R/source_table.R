@@ -10,9 +10,7 @@
 #' @export
 #' @examples
 #' annmods()
-#' TODO: add use for mode/add different modes
 
-# source("CoMeAn/R/overlap.R")
 # source("CoMeAn/R/module_assignment.R")
 # source("CoMeAn/R/read_in.R")
 

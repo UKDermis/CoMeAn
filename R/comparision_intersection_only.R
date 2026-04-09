@@ -4,11 +4,10 @@
 #'
 #' @param file1 (Required) String, name of the file to be loaded. Default is "AdL"
 #' @param file2 (Required) String, name of the file to be loaded. Default is "PsoL"
-#' @param min_dist (Optional) Float, value the edges/connctions need to larger than to be kept
 #' @param cwd (Optional) String, current working directory. Where to find the file. Default is "./PAP/data/"
 #' @param format1 (Optional) String, specifies the file format. Default is "gml"
 #' @param format2 (Optional) String, specifies the file format. Default is "gml"
-#' @param overlap (Optional) String, specifies the method used to calculate module distance. Default is "Overlap"
+#' @param dist_method (Optional) String, specifies the method used to calculate module distance. Default is "overlap"
 #'
 #' @keywords analysis_function
 #' @export
@@ -20,7 +19,7 @@
 # library(data.table)
 # library(Rfast)
 
-comparison_intersection_only <- function(file1="AdL", file2="PsoL", min_dist=0.75, cwd="./PAP/data/", format1="gml", format2="gml", overlap="Overlap"){
+comparison_intersection_only <- function(file1="AdL", file2="PsoL", cwd="./PAP/data/", format1="gml", format2="gml", dist_method="overlap"){
   graph1 <- read_in(file1, cwd=cwd, format=format1)
   graph2 <- read_in(file2, cwd=cwd, format=format2)
 
@@ -42,11 +41,10 @@ comparison_intersection_only <- function(file1="AdL", file2="PsoL", min_dist=0.7
   graph1 <- information_table(graph1, file1)
   graph2 <- information_table(graph2, file2)
 
-  # do module-wise comparision if dist between modules above min_dist
   g1_modules <- unique(V(graph1)$module)
   g2_modules <- unique(V(graph2)$module)
 
-  # module comparision and produce heatmap of distances
+  # module comparison and produce heatmap of distances
   n1 <- length(g1_modules)
   n2 <- length(g2_modules)
   heatmap_base <- data.frame(matrix(rep(0, len=n1*n2), nrow=n1, ncol=n2))
@@ -57,14 +55,14 @@ comparison_intersection_only <- function(file1="AdL", file2="PsoL", min_dist=0.7
     v1 <- V(graph1)[which(V(graph1)$module == m1)]
     for(m2 in g2_modules){
       v2 <- V(graph2)[which(V(graph2)$module == m2)]
-      heatmap_base[i, j] <- module_comparision(induced_subgraph(graph1, v1), induced_subgraph(graph2, v2), min_dist, overlap)
+      heatmap_base[i, j] <- module_comparison(induced_subgraph(graph1, v1), induced_subgraph(graph2, v2), dist_method)
       j <- j+1
     }
     i <- i+1
   }
   write.csv(heatmap_base, file = "./PAP/data/out/Overlap_heatmap_vals.csv")
 
-  filename <- "comparision_intersection_heatmap.png"
+  filename <- "comparison_intersection_heatmap.png"
   hmap <- heatmap_base %>% tibble::rownames_to_column() %>% tidyr::gather(colname, distance, -rowname)
 
   names(hmap)[names(hmap) == "colname"] <- "Modules_PsoL"
@@ -95,6 +93,6 @@ comparison_intersection_only <- function(file1="AdL", file2="PsoL", min_dist=0.7
   names(hmap_percent)[names(hmap_percent) == "colname"] <- "Modules_PsoL"
   names(hmap_percent)[names(hmap_percent) == "rowname"] <- "Modules_AdL"
 
-  filename <- "comparision_intersection_heatmap_percentage.png"
+  filename <- "comparison_intersection_heatmap_percentage.png"
   save_and_plot(file1, file2, filename, hmap_percent)
 }

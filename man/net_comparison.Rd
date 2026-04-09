@@ -10,8 +10,7 @@ net_comparison(
   graph2 = PSO_graph,
   file1 = "AD",
   file2 = "PSO",
-  min_dist = 0.75,
-  overlap = "Overlap"
+  dist_method = "overlap"
 )
 }
 \arguments{
@@ -19,9 +18,7 @@ net_comparison(
 
 \item{file2}{(Required) String, name of the file to be loaded. Default is "PsoL"}
 
-\item{min_dist}{(Optional) Float, value the edges/connctions need to larger than to be kept}
-
-\item{overlap}{(Optional) String, specifies the method used to calculate module distance. Default is "Overlap"}
+\item{dist_method}{(Optional) String, specifies the method used to calculate module distance. Default is "overlap"}
 
 \item{cwd}{(Optional) String, current working directory. Where to find the file. Default is "./PAP/data/"}
 

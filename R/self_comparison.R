@@ -1,7 +1,6 @@
 #' Generates new modules for an igraph object and then compares novel modules to the original modules
 #'
 #' @param file (Optional) String, name of the file to be loaded. Default is "AdL"
-#' @param min_dist (Optional)  Float, value the edges/connctions need to larger than to be kept
 #' @param cwd (Optional) String, current working directory. Where to find the file. Default is "./PAP/data/"
 #' @param format (Optional)  String, specifies the file format. Default is "gml"
 #'
@@ -9,14 +8,13 @@
 #' @export
 #' @examples
 #' annmods()
-#' TODO: Add variable to control used distance algorithm, add further analysis
 
 # library(igraph)
 # library(tidyverse)
 # library(data.table)
 # library(Rfast)
 
-self_comparison <- function(file, min_dist=0.75, cwd="./", format="gml"){
+self_comparison <- function(file, cwd="./", format="gml"){
   x <- c(cwd, file, "_new.", format)
   x <- paste(x, collapse="")
 
@@ -30,7 +28,7 @@ self_comparison <- function(file, min_dist=0.75, cwd="./", format="gml"){
   g1_modules <- unique(V(graph)$sknsg)
   g2_modules <- unique(V(cleaned_graph)$module)
 
-  # module comparision and produce heatmap of distances
+  # module comparison and produce heatmap of distances
   n1 <- length(g1_modules)
   n2 <- length(g2_modules)
   heatmap_base <- data.frame(matrix(rep(0, len=n1*n2), nrow=n1, ncol=n2))
@@ -41,7 +39,7 @@ self_comparison <- function(file, min_dist=0.75, cwd="./", format="gml"){
     v1 <- V(graph)[which(V(graph)$sknsg == m1)]
     for(m2 in g2_modules){
       v2 <- V(cleaned_graph)[which(V(cleaned_graph)$module == m2)]
-      heatmap_base[i, j] <- module_comparision(induced_subgraph(graph, v1), induced_subgraph(cleaned_graph, v2), min_dist)
+      heatmap_base[i, j] <- module_comparison(induced_subgraph(graph, v1), induced_subgraph(cleaned_graph, v2))
       j <- j+1
     }
     i <- i+1

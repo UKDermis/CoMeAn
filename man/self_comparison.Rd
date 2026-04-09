@@ -4,12 +4,10 @@
 \alias{self_comparison}
 \title{Generates new modules for an igraph object and then compares novel modules to the original modules}
 \usage{
-self_comparison(file, min_dist = 0.75, cwd = "./", format = "gml")
+self_comparison(file, cwd = "./", format = "gml")
 }
 \arguments{
 \item{file}{(Optional) String, name of the file to be loaded. Default is "AdL"}
-
-\item{min_dist}{(Optional)  Float, value the edges/connctions need to larger than to be kept}
 
 \item{cwd}{(Optional) String, current working directory. Where to find the file. Default is "./PAP/data/"}
 

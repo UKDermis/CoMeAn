@@ -12,10 +12,11 @@ construct_conet(
   cutcor = 0.8,
   ndeg = 1,
   negcors = F,
-  annottable = SkinSigPATH_toENSG,
+  compsiz = 3,
+  annottable = SkinSig_annotation,
   plot_signature_overlay = F,
   layout = layout_with_fr,
-  compsiz = 3
+  plot = FALSE
 )
 }
 \arguments{
@@ -30,6 +31,9 @@ construct_conet(
 \item{negcors}{(Optional) Boolean; include both negative and positive corrs (TRUE) or only positive (FALSE).
 Default=FALSE}
 
+\item{compsiz}{(Optional) Define minimum component size under which to discard small components
+(disconnected subgraphs). Default = 3}
+
 \item{annottable}{(Optional) Name of gene signature table. Currently the SkinSig pre-formatted table is supported.
 Default= "SkinSigPATH_toENSG"}
 
@@ -39,8 +43,7 @@ May crash/take long on low-spec computers. Default=FALSE}
 \item{layout}{(Optional) Define igraph layout of output graphs. For negcors=T, usually layout_as_star,
 layout_as_tree are preferred. Default= layout_with_fr}
 
-\item{compsiz}{(Optional) Define minimum component size under which to discard small components
-(disconnected subgraphs). Default = 3}
+\item{plot}{(Optional) Boolean variable. Decides if the function will produces plots. Default = FALSE}
 }
 \description{
 Pearson co-expression network from gene expression matrix

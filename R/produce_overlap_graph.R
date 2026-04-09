@@ -12,7 +12,6 @@
 #' annmods()
 
 # source("CoMeAn/R/read_in.R")
-# source("CoMeAn/R/overlap.R")
 
 produce_overlap_graph <- function(file1="AdL", file2="PsoL", cwd="./PAP/data/", format1="gml", format2="gml"){
   graph1 <- read_in(file1, cwd=cwd, format=format1)

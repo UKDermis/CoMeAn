@@ -13,7 +13,6 @@
 
 gene_perc_comp <- function(in_graphs){
 
-  # do module-wise comparision if dist between modules above min_dist
   gfrm <- lapply(in_graphs, function(gs){ as.data.frame(cbind(V(gs)$module,
                                                               V(gs)$gsymb))} )
 
