@@ -24,26 +24,37 @@
 #'                      layout_as_tree are preferred. Default= layout_with_fr
 #' @param compsiz (Optional) Define minimum component size under which to discard small components
 #'                      (disconnected subgraphs). Default = 3
+#' @param plot (Optional) Boolean variable. Decides if the function will produces plots. Default = FALSE
 #'
 #' @keywords co-expression network igraph Biobase clusterprofiler org.Hs.eg.db
 #' @export
 #' @examples
 #' construct_conet()
 
-# TODO optional community plot
-
 construct_conet <- function(exmat, outnam,
                      cutcor=0.8,
                      ndeg=1,
                      negcors=F,
-                     annottable=SkinSigPATH_toENSG,
+                     compsiz=3,
+                     annottable=SkinSig_annotation,
                      plot_signature_overlay=F,
                      layout=layout_with_fr,
-                     compsiz=3){
+                     plot=FALSE){
 
-
-  # correlation
-  sset <- cor(t(exmat))
+  name <- paste0(outnam, "_corr.csv")
+  if(file.exists(name)){
+    sset <- data.matrix(read.csv(name, row.names = 1))
+    print("Data loaded from storage")
+  } else {
+    sset <- cor(t(exmat))
+    utils::write.table(sset,
+              file = name,
+              sep = ",",
+              row.names = T,
+              dec=".",
+              quote = F)
+  }
+  print("Correlation matrix calculated")
 
   # Filter corr table
   diag(sset) <- 0
@@ -152,7 +163,7 @@ construct_conet <- function(exmat, outnam,
   if (negcors) {
 
 
-  print("no community detection due to negative edge weights")
+    print("no community detection due to negative edge weights")
 
     clvtab <- setNames(data.frame(V(sset)$name, V(sset)$gsymb,
                                   V(sset)$sknsg, V(sset)$gcol,
@@ -197,9 +208,9 @@ construct_conet <- function(exmat, outnam,
 
   utils::write.table(clvtab,
               file = paste0(outnam, "_nodestats.csv"),
-              sep = "\t",
+              sep = ",",
               row.names = F,
-              dec=",",
+              dec=".",
               quote = F)
 
 
@@ -209,47 +220,48 @@ construct_conet <- function(exmat, outnam,
 
   vii2 <- layout(sset)
 
-  if (negcors) {
+  if(plot){
+    if (negcors) {
 
     png(filename = paste0(outnam, "Simple.png"),
         height = 2000, width = 2000)
     plot(sset, vertex.label=" ", vertex.size=2, layout=vii2)
     dev.off()
 
-  } else {
+    } else {
 
-  png(filename = paste0(outnam, "Comms.png"),
-      height = 2000, width = 2000)
-    plot(clv, sset, vertex.label=" ", vertex.size=2, layout=vii2)
-  dev.off()
-
-  }
-
-  # SkinSig plot
-  if (plot_signature_overlay) {
-    png(filename = paste0(outnam, "SkinSig.png"),
-        height = 3000, width = 3000)
-    plot(sset,
-       vertex.label=V(sset)$gsymb,
-       vertex.label.color="black",
-       vertex.color=V(sset)$gcol,
-       vertex.size=2,
-       layout=vii2)
-    legend("bottomright", "(x,y)",
-         (scol$skinsig),
-         fill=(scol$scols),
-         pt.cex=5,
-         cex=5, bty="n",
-         ncol=2)
-
+    png(filename = paste0(outnam, "Comms.png"),
+        height = 2000, width = 2000)
+      plot(clv, sset, vertex.label=" ", vertex.size=2, layout=vii2)
     dev.off()
 
-    }  else {
-      print("SkinSig not plotted")
+    }
+
+    # SkinSig plot
+    if (plot_signature_overlay) {
+      png(filename = paste0(outnam, "SkinSig.png"),
+          height = 3000, width = 3000)
+      plot(sset,
+         vertex.label=V(sset)$gsymb,
+         vertex.label.color="black",
+         vertex.color=V(sset)$gcol,
+         vertex.size=2,
+         layout=vii2)
+      legend("bottomright", "(x,y)",
+           (scol$skinsig),
+           fill=(scol$scols),
+           pt.cex=5,
+           cex=5, bty="n",
+           ncol=2)
+
+      dev.off()
+
+      }  else {
+        print("SkinSig not plotted")
+    }
   }
 
-
-    closeAllConnections()
+  closeAllConnections()
 
   return(sset)
 

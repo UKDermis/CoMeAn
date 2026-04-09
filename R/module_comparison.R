@@ -3,7 +3,7 @@
 #' @param net1 (required): One of the two igraph objects beign compared
 #' @param net2 (required): The other igraph object being compared
 #' @param min_dist (required): float; value indicating if furher analysis should be done
-#' @param method (optional): String, sets the comparision algorithm. Default: "Overlap"
+#' @param method (optional): String, sets the comparision algorithm. Default: "overlap"
 #'
 #' @keywords helper-function
 #' @export
@@ -16,7 +16,7 @@
 # source("CoMeAn/R/hamming_dist_e_weight.R")
 # source("CoMeAn/R/hamming_dist_v_count.R")
 
-module_comparision <- function(g1, g2, method="Overlap"){
+module_comparision <- function(g1, g2, method="overlap"){
   if(method == "overlap"){
      dist <- dist_overlap_size(g1, g2)
   } else if (method == "e_count") {

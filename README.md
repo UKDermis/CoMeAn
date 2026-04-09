@@ -177,7 +177,7 @@ cutcor=0.8 # correlation value cutoff
 ndeg=3 # nodes with fewer degrees (connections) will be discarded
 compsiz=5 # minimum size of disconnected graph components, comp.s with fewer nodes will be discarded.
 
-AC_graph <- construct_conet_base(exmat=lmat_filt$AC,
+AC_graph <- construct_conet(exmat=lmat_filt$AC,
                             annottable = SkinSig_annotation, # the celltype annotations to be used
                             plot_signature_overlay = T, # to generate a basic network plot with celltypes
                             plot=T, 
@@ -187,7 +187,7 @@ AC_graph <- construct_conet_base(exmat=lmat_filt$AC,
                             compsiz = compsiz,
                             outnam = "AC")
 
-HS_graph <- construct_conet_base(exmat=lmat_filt$HS,
+HS_graph <- construct_conet(exmat=lmat_filt$HS,
                              annottable = SkinSig_annotation,
                              plot_signature_overlay = T,
                              plot=T,
@@ -197,7 +197,7 @@ HS_graph <- construct_conet_base(exmat=lmat_filt$HS,
                              compsiz = compsiz,
                              outnam = "HS")
 
-RS_graph <- construct_conet_base(lmat_filt$RS,
+RS_graph <- construct_conet(lmat_filt$RS,
                              annottable = SkinSig_annotation,
                              plot_signature_overlay = T,
                              plot=T,
