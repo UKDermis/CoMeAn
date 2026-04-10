@@ -17,51 +17,17 @@ Since most functions produce multiple large output files of various formats, out
 
 The package contains example data from the Human Microbiome Research Program: [Microbes in Allergy and Autoimmunity Related to the Skin](https://cordis.europa.eu/project/id/261366/reporting), in the form of skin gene expression (RMA-normalized microarray data) matrices from healthy (`CTRL_example`), atopic dermatitis (AD; `AD_example`), and psoriasis (PSO; `PSO_example`) patients, and gene annotation data on a subset of differentially expressed genes (`SkinSig_annotation`).
 
-The data tables are supposed to be loaded after loading the package itself, but are also accessible with the `data()` function (e.g. `data(AD_example)`).
-
-# Required packages
-
-Obligatory packages:
-
-```{r echo=T, eval=FALSE}
- install.packages(c("igraph", "dplyr", "tidyr", "matrixStats", "ggplot2"))
- BiocManager::install(c("Biobase"))
-```
-
-Optional dependencies for functional enrichment:
-
-```{r echo=T, eval=FALSE}
- BiocManager::install(c("clusterProfiler", "org.Hs.eg.db"))
- devtools::install_github("wjawaid/enrichR")
-```
-
-Load packages:
-
 ```{r echo=T, eval=FALSE}
 
-# Obligatory
-library(Biobase)
-library(igraph)
-library(dplyr)
-library(RColorBrewer)
-
-# Optional
-#library(ggplot2) # for visualization
-#library(clusterProfiler) # cluster profiling
-#library(org.Hs.eg.db) # accessory for GO term analyses
-#library(enrichR) # GO term analyses
-
-```
-
-Load `CoMeAn`:
-
-```{r echo=T, eval=FALSE}
 library(CoMeAn)
+
 ```
 
 # Network construction from gene expression table and cell type annotation table
 
-## Load and inspect data
+## Load and inspect example data
+
+The data tables are supposed to be loaded after loading the package itself, but are also accessible with the `data()` function (e.g. `data(AD_example)`).
 
 Check dimensions of the input matrices:
 
