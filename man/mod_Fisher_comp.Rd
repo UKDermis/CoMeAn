@@ -6,8 +6,6 @@
 Fisher test on the cell/tissue type-annotated modules of two or multiple gene co-expression networks. Returns a data frame of significant enrichment per module.}
 \usage{
 mod_Fisher_comp(in_graphs, markgens)
-
-mod_Fisher_comp(in_graphs, markgens)
 }
 \arguments{
 \item{in_graphs}{(Required) A named list of input graphs}
@@ -17,12 +15,8 @@ mod_Fisher_comp(in_graphs, markgens)
 \description{
 mod_Fisher_comp
 Fisher test on the cell/tissue type-annotated modules of two or multiple gene co-expression networks. Returns a data frame of significant enrichment per module.
-
-mod_Fisher_comp
-Fisher test on the cell/tissue type-annotated modules of two or multiple gene co-expression networks. Returns a data frame of significant enrichment per module.
 }
 \examples{
-mod_Fisher_comp()
 mod_Fisher_comp()
 }
 \keyword{module_comparison}
