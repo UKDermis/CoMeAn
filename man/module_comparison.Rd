@@ -9,7 +9,7 @@ module_comparison(g1, g2, dist_method = "overlap")
 \arguments{
 \item{dist_method}{(optional): String, sets the comparison algorithm. Default: "overlap"}
 
-\item{net1}{(required): One of the two igraph objects beign compared}
+\item{net1}{(required): One of the two igraph objects being compared}
 
 \item{net2}{(required): The other igraph object being compared}
 }

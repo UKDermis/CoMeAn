@@ -1,6 +1,6 @@
 #' Calculates the hamming distance between two igraph objects
 #'
-#' @param net1 (required): One of the two igraph objects beign compared
+#' @param net1 (required): One of the two igraph objects being compared
 #' @param net2 (required): The other igraph object being compared
 #' @param dist_method (optional): String, sets the comparison algorithm. Default: "overlap"
 #'
