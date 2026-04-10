@@ -27,7 +27,6 @@ source_table(
 Reads in two files and produces a .csv file based off the module_assignment method
 }
 \examples{
-annmods()
-TODO: add use for mode/add different modes
+ann_mods()
 }
 \keyword{produces_csv}

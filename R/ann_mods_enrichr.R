@@ -13,9 +13,9 @@
 #' @keywords co-expression network igraph enrichr
 #' @export
 #' @examples
-#' annmods()
+#' ann_mods_enrichr()
 
-annmods_enrichr <- function (in_graph, databs, outnam)
+ann_mods_enrichr <- function (in_graph, databs, outnam)
 {
   if (!requireNamespace("enrichR", quietly = TRUE)) {
     stop("Package sparklyr needed.")

@@ -27,7 +27,7 @@ produce_overlap_graph(
 Reads in two files and produces a .gml file based off the overlap method
 }
 \examples{
-annmods()
+ann_mods()
 }
 \keyword{helper-function}
 \keyword{produces_graph,}

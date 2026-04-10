@@ -217,13 +217,13 @@ print("Step 3 complete")
 
 The generated "\_network.gml" and "\_nodestats.csv" files in conjunction can be used for interactive exploration in Cytoscape (Import network from gml file; import node attributes from csv table).
 
-#### 4. Optional GO enrichment per module. This step might take long and consume excessive memory for large networks; annmods() uses clusterProfiler; when preferred, EnrichR can also be used.
+#### 4. Optional GO enrichment per module. This step might take long and consume excessive memory for large networks; ann_mods() uses clusterProfiler; when preferred, EnrichR can also be used.
 
 ```{r echo=T, eval=FALSE}
 # Enrichment per disease, per module. Results are written to sorted csv tables.
-annmods(AC_graph, all_genes,  outnam = "AC_module_enrichment")
-annmods(HS_graph, all_genes, outnam = "HS_module_enrichment")
-annmods(RS_graph, all_genes, outnam = "RS_module_enrichment")
+ann_mods(AC_graph, all_genes,  outnam = "AC_module_enrichment")
+ann_mods(HS_graph, all_genes, outnam = "HS_module_enrichment")
+ann_mods(RS_graph, all_genes, outnam = "RS_module_enrichment")
 ```
 
 Alternatively, we can use the more flexible enrichR package, using the wrapper function below. Currently we advise to run EnrichR on the sets of modules with a single database in one go.
@@ -231,11 +231,11 @@ Alternatively, we can use the more flexible enrichR package, using the wrapper f
 ```{r echo=T, eval=FALSE}
 # Enrichment per disease, per module. Results are written to sorted csv tables.
 databs="GO_Biological_Process_2023"
-annmods_enrichr(AC_graph,  databs = databs,
+ann_mods_enrichr(AC_graph,  databs = databs,
                 outnam = "AC_enrichR")
-annmods_enrichr(HS_graph,  databs = databs,
+ann_mods_enrichr(HS_graph,  databs = databs,
                 outnam = "HS_enrichR")
-annmods_enrichr(RS_graph,  databs = databs,
+ann_mods_enrichr(RS_graph,  databs = databs,
                 outnam = "RS_enrichR")
 ```
 
@@ -357,7 +357,7 @@ Closely examining similar and dissimilar gene clusters, we often find key genes 
 target_gene="PI3"
 
 # gene expression (from the input expression matrices)
-targ_exprs_boxplot(lmat, target_gene)
+target_gene_exprs(lmat, target_gene)
 
 # vertex attributes per graph
 tg_att <- target_gene_attrib(l1, target_gene)

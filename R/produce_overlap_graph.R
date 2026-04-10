@@ -9,7 +9,7 @@
 #' @keywords produces_graph, helper-function
 #' @export
 #' @examples
-#' annmods()
+#' ann_mods()
 
 # source("CoMeAn/R/read_in.R")
 

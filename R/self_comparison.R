@@ -7,7 +7,7 @@
 #' @keywords produces_plot
 #' @export
 #' @examples
-#' annmods()
+#' ann_mods()
 
 # library(igraph)
 # library(tidyverse)

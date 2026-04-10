@@ -7,7 +7,7 @@
 #' @keywords helper-function
 #' @export
 #' @examples
-#' annmods()
+#' ann_mods()
 
 # source("CoMeAn/R/hamming_dist_abs_e_weight.R")
 # source("CoMeAn/R/hamming_dist_e_count.R")

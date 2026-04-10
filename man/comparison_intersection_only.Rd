@@ -32,6 +32,6 @@ Graph intersection comparison
 Compares two graphs based on their overlap, based off datastructures found via unsupervised learning.
 }
 \examples{
-annmods()
+ann_mods()
 }
 \keyword{analysis_function}

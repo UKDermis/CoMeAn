@@ -6,9 +6,9 @@
 #' @keywords helper-function
 #' @export
 #' @examples
-#' annmods()
+#' ann_mods()
 
-rowMax <- function(data){
+RowMax <- function(data){
   data <- data.table::transpose(data)
   vec <- sapply(data, max, na.rm = TRUE)
   return(vec)

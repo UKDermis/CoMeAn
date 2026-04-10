@@ -15,9 +15,9 @@
 #' @keywords co-expression network igraph clusterprofiler
 #' @export
 #' @examples
-#' annmods()
+#' ann_mods()
 
-annmods <- function(in_graph, univ_genes, outnam, pcut=0.05){
+ann_mods <- function(in_graph, univ_genes, outnam, pcut=0.05){
 
   if (!requireNamespace("clusterProfiler", quietly = TRUE)) {
     stop("Package clusterProfiler needed for this functionality")

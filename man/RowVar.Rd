@@ -13,7 +13,7 @@ RowVar(x, ...)
 Row-wise variance values of a matrix
 }
 \examples{
-annmods()
+ann_mods()
 }
 \keyword{Biobase}
 \keyword{clusterprofiler}

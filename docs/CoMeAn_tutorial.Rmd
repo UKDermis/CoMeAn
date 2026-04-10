@@ -173,19 +173,19 @@ print("Step 3 complete")
 ```
 #### 4. GO enrichment per module. This step might take long and consume excessive memory on standard laptops.
 ```{r echo=T, eval=FALSE}
-annmods(AC_graph, all_genes,  outnam = "AC_module_enrichment")
-annmods(HS_graph, all_genes, outnam = "HS_module_enrichment")
-annmods(RS_graph, all_genes, outnam = "RS_module_enrichment")
+ann_mods(AC_graph, all_genes,  outnam = "AC_module_enrichment")
+ann_mods(HS_graph, all_genes, outnam = "HS_module_enrichment")
+ann_mods(RS_graph, all_genes, outnam = "RS_module_enrichment")
 ```
 Alternatively, we can use the more flexible enrichR package, using the wrapper function below. Currently we advise to run EnrichR on the sets of modules with a single database in one go.
 ```{r echo=T, eval=FALSE}
 # Enrichment per disease, per module. Results are written to sorted csv tables.
 databs="GO_Biological_Process_2023"
-annmods_enrichr(AC_graph,  databs = databs,
+ann_mods_enrichr(AC_graph,  databs = databs,
                 outnam = "AC_enrichR")
-annmods_enrichr(HS_graph,  databs = databs,
+ann_mods_enrichr(HS_graph,  databs = databs,
                 outnam = "HS_enrichR")
-annmods_enrichr(RS_graph,  databs = databs,
+ann_mods_enrichr(RS_graph,  databs = databs,
                 outnam = "RS_enrichR")
 ```
 Make a dotplot of top enriched functions per disease, per module
@@ -275,7 +275,7 @@ Closely examining similar and dissimilar gene clusters, we often find key genes 
 ```{r echo=T, eval=FALSE}
 target_gene="S100A7"
 
-targ_exprs_boxplot(lmat, target_gene)
+target_gene_exprs(lmat, target_gene)
 ```
 ### *Let's expand to multiple graphs*
 tmp1 <- single_gene_analysis(AD_graph, target_gene)

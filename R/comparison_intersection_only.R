@@ -12,7 +12,7 @@
 #' @keywords analysis_function
 #' @export
 #' @examples
-#' annmods()
+#' ann_mods()
 
 # library(igraph)
 # library(tidyverse)

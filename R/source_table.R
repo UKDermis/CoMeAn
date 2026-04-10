@@ -9,7 +9,7 @@
 #' @keywords produces_csv
 #' @export
 #' @examples
-#' annmods()
+#' ann_mods()
 
 # source("CoMeAn/R/module_assignment.R")
 # source("CoMeAn/R/read_in.R")

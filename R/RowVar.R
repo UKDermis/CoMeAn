@@ -6,7 +6,7 @@
 #' @keywords co-expression network igraph Biobase clusterprofiler org.Hs.eg.db
 #' @export
 #' @examples
-#' annmods()
+#' ann_mods()
 
 RowVar <- function(x, ...) {
   rowSums((x - rowMeans(x, ...))^2, ...)/(dim(x)[2] - 1)

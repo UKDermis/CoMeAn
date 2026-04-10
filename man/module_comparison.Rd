@@ -17,6 +17,6 @@ module_comparison(g1, g2, dist_method = "overlap")
 Calculates the hamming distance between two igraph objects
 }
 \examples{
-annmods()
+ann_mods()
 }
 \keyword{helper-function}

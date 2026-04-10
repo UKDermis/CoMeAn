@@ -17,7 +17,6 @@ self_comparison(file, cwd = "./", format = "gml")
 Generates new modules for an igraph object and then compares novel modules to the original modules
 }
 \examples{
-annmods()
-TODO: Add variable to control used distance algorithm, add further analysis
+ann_mods()
 }
 \keyword{produces_plot}

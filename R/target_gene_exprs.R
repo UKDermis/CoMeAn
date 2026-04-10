@@ -13,7 +13,7 @@
 #' @examples
 #' target_gene_exprs()
 
-targ_exprs_boxplot <- function(inlist, target_gene){
+target_gene_exprs <- function(inlist, target_gene){
 
   if (!requireNamespace("reshape2", quietly = TRUE)) {
     stop("Package reshape2 needed for this functionality")
