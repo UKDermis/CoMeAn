@@ -13,6 +13,7 @@ usethis::use_data(PSO_example, overwrite = TRUE)
 
 # gene annotation data
 SkinSig_annotation = read.csv("inst/extdata/SkinSig_annotation.txt", sep="\t")
+rownames(SkinSig_annotation) = as.character(SkinSig_annotation$HGNC.symbol)
 usethis::use_data(SkinSig_annotation, overwrite = TRUE)
 
 #---
